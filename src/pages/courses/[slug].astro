@@ -4,7 +4,7 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
-// Pre-render semua path course
+// WAJIB untuk route dinamis: pre-render semua slug course
 export async function getStaticPaths() {
   const courses = await getCollection('courses');
   return courses.map((c) => ({
