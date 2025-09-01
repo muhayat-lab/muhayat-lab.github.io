@@ -1,0 +1,47 @@
+name: Create Course from Issue
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  build:
+    if: contains(github.event.issue.labels.*.name, 'content:course')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buat file course dari issue
+        run: |
+          SLUG=$(echo "${{ github.event.issue.body }}" | grep -A1 "Slug" | tail -1 | xargs)
+          TITLE=$(echo "${{ github.event.issue.body }}" | grep -A1 "Judul" | tail -1 | xargs)
+          CODE=$(echo "${{ github.event.issue.body }}" | grep -A1 "Kode Matkul" | tail -1 | xargs)
+          DESCRIPTION=$(echo "${{ github.event.issue.body }}" | grep -A1 "Deskripsi" | tail -1 | xargs)
+          SESSIONS=$(echo "${{ github.event.issue.body }}" | awk '/Sesi Perkuliahan/{flag=1;next}flag')
+
+          FILE="src/content/courses/${SLUG}.md"
+          mkdir -p src/content/courses
+          {
+            echo "---"
+            echo "title: \"${TITLE}\""
+            echo "code: \"${CODE}\""
+            echo "description: \"${DESCRIPTION}\""
+            echo "sessions:"
+            echo "${SESSIONS}"
+            echo "---"
+            echo ""
+            echo "Silabus singkat ${TITLE}."
+          } > "$FILE"
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add "$FILE"
+          git commit -m "chore(content): add course from issue #${{ github.event.issue.number }}" || echo "No changes"
+          git push
+      - name: Tutup issue
+        uses: peter-evans/close-issue@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: "✅ Course berhasil dibuat dan ditambahkan ke web."
