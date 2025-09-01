@@ -1,0 +1,37 @@
+name: Upload Course File
+description: Tambah file baru untuk mata kuliah
+title: "course-file: [nama-matkul] - [nama-file]"
+labels: ["content:course-file"]
+body:
+  - type: input
+    id: course_slug
+    attributes:
+      label: Slug Course (nama folder matkul, sesuai file .md)
+      placeholder: pemrograman-web
+    validations: { required: true }
+
+  - type: input
+    id: week
+    attributes:
+      label: Minggu ke-
+      placeholder: "1"
+    validations: { required: true }
+
+  - type: input
+    id: file_name
+    attributes:
+      label: Nama file (contoh: Slide, Starter, Tugas)
+      placeholder: Slide
+
+  - type: input
+    id: file_url
+    attributes:
+      label: URL atau path file (mulai dari /courses/…)
+      placeholder: /courses/pemrograman-web/files/01-slide.pdf
+    validations: { required: true }
+
+  - type: input
+    id: file_size
+    attributes:
+      label: Ukuran File (opsional)
+      placeholder: 1.2 MB
