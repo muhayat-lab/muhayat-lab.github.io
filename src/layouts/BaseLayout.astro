@@ -1,0 +1,15 @@
+---
+const { title = 'Muhayat Techlabs', description = 'Website pribadi dosen untuk materi kuliah & artikel' } = Astro.props;
+---
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="text-gray-800 selection:bg-emerald-200/60">
+    <slot />
+  </body>
+</html>

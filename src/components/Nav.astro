@@ -1,0 +1,20 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/courses/', label: 'Courses' },
+  { href: '/posts/', label: 'Articles' },
+  { href: '/search', label: 'Search' },
+  { href: '/about/', label: 'About' }
+];
+---
+<nav class="sticky top-0 z-30 backdrop-blur bg-white/70 border-b border-gray-200/70">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-semibold">
+      <img src="/favicon.ico" class="h-6 w-6" alt="Logo" />
+      <span>Muhayat Techlabs</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+      {links.map(l => <li><a class="hover:text-emerald-700" href={l.href}>{l.label}</a></li>)}
+    </ul>
+  </div>
+</nav>

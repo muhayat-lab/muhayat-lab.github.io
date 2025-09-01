@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+const { slug } = Astro.params;
+const post = (await getCollection('posts')).find(p => p.slug === slug);
+if (!post) throw new Error('Post not found');
+---
+<Base title={`${post.data.title} — Muhayat Techlabs`}>
+  <Nav />
+  <main class="max-w-3xl mx-auto px-4 py-10 prose prose-emerald">
+    <h1>{post.data.title}</h1>
+    <p class="text-sm text-gray-500">{post.data.date}</p>
+    <article set:html={post.body} />
+  </main>
+  <Footer />
+</Base>
