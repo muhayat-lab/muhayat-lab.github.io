@@ -1,0 +1,52 @@
+name: Add Course File from Issue
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  build:
+    if: contains(github.event.issue.labels.*.name, 'content:course-file')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tambahkan file ke course
+        run: |
+          COURSE=$(echo "${{ github.event.issue.body }}" | grep -A1 "Slug Course" | tail -1 | xargs)
+          WEEK=$(echo "${{ github.event.issue.body }}" | grep -A1 "Minggu ke-" | tail -1 | xargs)
+          NAME=$(echo "${{ github.event.issue.body }}" | grep -A1 "Nama file" | tail -1 | xargs)
+          URL=$(echo "${{ github.event.issue.body }}" | grep -A1 "URL" | tail -1 | xargs)
+          SIZE=$(echo "${{ github.event.issue.body }}" | grep -A1 "Ukuran File" | tail -1 | xargs)
+
+          FILE="src/content/courses/${COURSE}.md"
+
+          if [ ! -f "$FILE" ]; then
+            echo "❌ Course $COURSE belum ada!"
+            exit 1
+          fi
+
+          # Sisipkan entri file baru ke minggu yang sesuai
+          awk -v w="week: ${WEEK}" -v n="$NAME" -v u="$URL" -v s="$SIZE" '
+            {
+              print $0
+              if ($0 ~ w) {
+                print "    files:"
+                print "      - { name: \"" n "\", url: \"" u "\", size: \"" s "\" }"
+              }
+            }' "$FILE" > tmp.md && mv tmp.md "$FILE"
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add "$FILE"
+          git commit -m "chore(content): add file $NAME to $COURSE week $WEEK" || echo "No changes"
+          git push
+
+      - name: Tutup issue
+        uses: peter-evans/close-issue@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: "✅ File berhasil ditambahkan ke course ${COURSE} minggu ke-${WEEK}."
