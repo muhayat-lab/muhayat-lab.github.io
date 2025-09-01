@@ -3,10 +3,19 @@ import Base from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
-const { slug } = Astro.params;
-const post = (await getCollection('posts')).find(p => p.slug === slug);
-if (!post) throw new Error('Post not found');
+
+// Pre-render semua path artikel
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((p) => ({
+    params: { slug: p.slug },
+    props: { post: p },
+  }));
+}
+
+const { post } = Astro.props;
 ---
+
 <Base title={`${post.data.title} — Muhayat Techlabs`}>
   <Nav />
   <main class="max-w-3xl mx-auto px-4 py-10 prose prose-emerald">
