@@ -1,0 +1,40 @@
+name: New Course
+description: Tambah mata kuliah baru
+title: "course: nama-matkul"
+labels: ["content:course"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Slug (tanpa spasi)
+      placeholder: pemrograman-web
+    validations: { required: true }
+
+  - type: input
+    id: title
+    attributes:
+      label: Judul
+      placeholder: Pemrograman Web
+    validations: { required: true }
+
+  - type: input
+    id: code
+    attributes:
+      label: Kode Matkul
+      placeholder: IF-101
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Deskripsi
+      placeholder: Ringkasan mata kuliah…
+
+  - type: textarea
+    id: sessions
+    attributes:
+      label: Sesi Perkuliahan (YAML/Markdown)
+      placeholder: |
+        - week: 1
+          title: Pendahuluan
+          files: []
+          reading: []
