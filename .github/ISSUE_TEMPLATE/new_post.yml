@@ -1,42 +1,43 @@
-name: New Course
-description: Tambah mata kuliah baru
-title: "course: nama-matkul"
-labels: ["content:course"]
+name: New Post
+description: Buat artikel baru
+title: "post: judul artikel"
+labels: ["content:post"]
 body:
   - type: input
     id: slug
-    attributes:
+    attributes: 
       label: Slug (tanpa spasi)
-      placeholder: pemrograman-web
+      placeholder: 2025-09-judul-artikel
     validations: { required: true }
+
   - type: input
     id: title
-    attributes:
+    attributes: 
       label: Judul
-      placeholder: Pemrograman Web
+      placeholder: Judul Artikel
     validations: { required: true }
+
   - type: input
-    id: code
-    attributes:
-      label: Kode Matkul
-      placeholder: IF-101
+    id: date
+    attributes: 
+      label: Tanggal (YYYY-MM-DD)
+      placeholder: 2025-09-01
+    validations: { required: true }
+
+  - type: input
+    id: tags
+    attributes: 
+      label: Tags (koma)
+      placeholder: kuliah,ai
+
   - type: textarea
-    id: description
-    attributes:
-      label: Deskripsi
-      placeholder: Ringkasan mata kuliah…
+    id: summary
+    attributes: 
+      label: Ringkasan
+      placeholder: Ringkasan singkat…
+
   - type: textarea
-    id: sessions
-    attributes:
-      label: Sesi Perkuliahan (YAML/Markdown)
-      placeholder: |
-        - week: 1
-          title: Pendahuluan
-          files:
-            - { name: "Slide", url: "/courses/pemrograman-web/files/01-slide.pdf" }
-          reading:
-            - { title: "Intro HTML", url: "https://developer.mozilla.org/" }
-        - week: 2
-          title: CSS Dasar
-          files: []
-          reading: []
+    id: content
+    attributes: 
+      label: Isi artikel (Markdown)
+      placeholder: Tulis konten di sini…
