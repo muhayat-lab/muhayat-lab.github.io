@@ -1,0 +1,53 @@
+/* ===== Markdown course content ===== */
+.md-content {
+  font-size: 0.95rem;          /* ~ sama dengan body text deskripsi */
+  line-height: 1.65;           /* nyaman dibaca */
+  color: #374151;              /* gray-700 */
+}
+
+/* heading kecil untuk judul section di markdown */
+.md-content h2, .md-content h3 {
+  margin: 1rem 0 .5rem;
+  color: #111827;              /* gray-900 */
+  font-weight: 700;
+}
+
+/* Tabel rapi dan full width */
+.md-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: .5rem;
+  font-size: 0.95rem;          /* samakan dengan body */
+}
+
+/* Header tabel */
+.md-content thead th {
+  background: #F9FAFB;         /* gray-50 */
+  color: #111827;
+  font-weight: 600;
+  border: 1px solid #E5E7EB;   /* gray-200 */
+  padding: .6rem .75rem;
+  text-align: left;
+}
+
+/* Sel tabel */
+.md-content td, .md-content th {
+  border: 1px solid #E5E7EB;
+  padding: .55rem .75rem;
+  vertical-align: top;
+}
+
+/* Link download */
+.md-content a {
+  color: #2563EB;              /* blue-600 */
+  text-decoration: none;
+}
+.md-content a:hover {
+  text-decoration: underline;
+}
+
+/* List (kalau nanti ada) */
+.md-content ul, .md-content ol {
+  margin: .5rem 0 .75rem;
+  padding-left: 1.25rem;
+}
