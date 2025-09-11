@@ -1,6 +1,6 @@
 ---
 const brand = "Muhayat Techlabs";
-const logo = "/muhayat.png"; // foto Bapak di /public
+const logo = "/muhayat.png"; // pastikan ada di /public
 ---
 
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
@@ -14,8 +14,8 @@ const logo = "/muhayat.png"; // foto Bapak di /public
           width="64" height="64"
           class="h-10 w-10 md:h-12 md:w-12 rounded-full ring-2 ring-[var(--brand)]/25 shadow-sm group-hover:scale-[1.02] transition"
         />
-        <span class="font-extrabold tracking-tight text-gray-900 text-xl md:text-2xl"
-          style="color: var(--brand);">
+        <span class="font-extrabold tracking-tight text-xl md:text-2xl"
+              style="color: var(--brand);">
           Muhayat Techlabs
         </span>
       </a>
@@ -29,11 +29,10 @@ const logo = "/muhayat.png"; // foto Bapak di /public
         <a href="/about" class="hover:text-[var(--brand)] text-gray-700">About</a>
       </nav>
 
-      <!-- Mobile burger -->
-      <button
+      <!-- Burger -->
+      <button id="openDrawer"
         class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-gray-50"
-        aria-label="Open menu"
-        onclick="document.documentElement.classList.add('drawer-open')">
+        aria-label="Open menu" aria-controls="siteDrawer" aria-expanded="false">
         <svg viewBox="0 0 24 24" class="h-7 w-7 text-gray-700">
           <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -41,25 +40,21 @@ const logo = "/muhayat.png"; // foto Bapak di /public
     </div>
   </div>
 
-  <!-- Overlay -->
-  <div
-    class="fixed inset-0 z-[60] hidden transition"
-    id="drawerOverlay"
-    onclick="document.documentElement.classList.remove('drawer-open')">
-  </div>
+  <!-- Overlay (selalu fixed di viewport) -->
+  <div id="drawerOverlay"
+       class="fixed inset-0 z-[60] hidden bg-black/30"></div>
 
-  <!-- Drawer -->
-  <aside
-    id="drawerMenu"
-    class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-xl border-l border-gray-100 p-5 flex flex-col gap-2 translate-x-full transition-transform duration-300">
+  <!-- Drawer panel (fixed ke viewport) -->
+  <aside id="siteDrawer"
+         class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-xl border-l border-gray-100
+                p-5 flex flex-col gap-2 translate-x-full will-change-transform"
+         role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
     <div class="flex items-center justify-between mb-4">
       <div class="flex items-center gap-3">
         <img src={logo} alt={brand} class="h-10 w-10 rounded-full ring-2 ring-[var(--brand)]/25"/>
-        <span class="font-bold" style="color:var(--brand)">{brand}</span>
+        <span id="drawerTitle" class="font-bold" style="color:var(--brand)">{brand}</span>
       </div>
-      <button class="p-2 rounded-lg hover:bg-gray-50"
-        onclick="document.documentElement.classList.remove('drawer-open')"
-        aria-label="Close menu">
+      <button id="closeDrawer" class="p-2 rounded-lg hover:bg-gray-50" aria-label="Close menu">
         <svg viewBox="0 0 24 24" class="h-6 w-6 text-gray-700">
           <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -78,13 +73,42 @@ const logo = "/muhayat.png"; // foto Bapak di /public
   </aside>
 
   <style>
-    /* Drawer mechanics */
-    .drawer-open #drawerOverlay {
-      display: block;
-      background: rgba(0, 0, 0, 0.35);
-    }
-    .drawer-open #drawerMenu {
-      transform: translateX(0);
-    }
+    /* Transisi & state open */
+    #siteDrawer { transition: transform .28s ease; }
+    .drawer-open #siteDrawer { transform: translateX(0); }
+    .drawer-open #drawerOverlay { display:block; }
+    .drawer-open body { overflow: hidden; }
   </style>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const body = document.body;
+      const openBtn = document.getElementById('openDrawer');
+      const closeBtn = document.getElementById('closeDrawer');
+      const overlay = document.getElementById('drawerOverlay');
+      const drawer  = document.getElementById('siteDrawer');
+
+      function openDrawer() {
+        root.classList.add('drawer-open');
+        openBtn?.setAttribute('aria-expanded', 'true');
+      }
+      function closeDrawer() {
+        root.classList.remove('drawer-open');
+        openBtn?.setAttribute('aria-expanded', 'false');
+      }
+
+      openBtn?.addEventListener('click', openDrawer);
+      closeBtn?.addEventListener('click', closeDrawer);
+      overlay?.addEventListener('click', closeDrawer);
+
+      // Tutup dengan ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDrawer();
+      });
+
+      // Jangan bubble ke overlay saat klik di dalam panel
+      drawer?.addEventListener('click', (e) => e.stopPropagation());
+    })();
+  </script>
 </header>
