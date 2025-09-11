@@ -1,0 +1,84 @@
+---
+const brand = "Muhayat Techlabs";
+const logo = "/muhayat.png"; // foto Bapak di /public
+---
+
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="h-16 flex items-center justify-between">
+      <!-- Brand -->
+      <a href="/" class="group flex items-center gap-3">
+        <img
+          src={logo}
+          alt={brand}
+          width="64" height="64"
+          class="h-10 w-10 md:h-12 md:w-12 rounded-full ring-2 ring-[var(--brand)]/25 shadow-sm group-hover:scale-[1.02] transition"
+        />
+        <span class="font-extrabold tracking-tight text-gray-900 text-xl md:text-2xl"
+          style="color: var(--brand);">
+          Muhayat Techlabs
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="/" class="hover:text-[var(--brand)] text-gray-700">Home</a>
+        <a href="/#courses" class="hover:text-[var(--brand)] text-gray-700">Courses</a>
+        <a href="/articles" class="hover:text-[var(--brand)] text-gray-700">Articles</a>
+        <a href="/search" class="hover:text-[var(--brand)] text-gray-700">Search</a>
+        <a href="/about" class="hover:text-[var(--brand)] text-gray-700">About</a>
+      </nav>
+
+      <!-- Mobile burger -->
+      <button
+        class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-gray-50"
+        aria-label="Open menu"
+        onclick="document.documentElement.classList.add('drawer-open')">
+        <svg viewBox="0 0 24 24" class="h-7 w-7 text-gray-700">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Drawer -->
+  <div
+    class="fixed inset-0 z-[60] hidden"
+    id="drawerOverlay"
+    onclick="document.documentElement.classList.remove('drawer-open')">
+  </div>
+
+  <aside
+    class="fixed top-0 right-0 z-[70] h-screen w-72 translate-x-full bg-white shadow-xl border-l border-gray-100 p-5 flex flex-col gap-2">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src={logo} alt={brand} class="h-10 w-10 rounded-full ring-2 ring-[var(--brand)]/25"/>
+        <span class="font-bold" style="color:var(--brand)">{brand}</span>
+      </div>
+      <button class="p-2 rounded-lg hover:bg-gray-50"
+        onclick="document.documentElement.classList.remove('drawer-open')"
+        aria-label="Close menu">
+        <svg viewBox="0 0 24 24" class="h-6 w-6 text-gray-700">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <a href="/" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800">Home</a>
+    <a href="/#courses" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800">Courses</a>
+    <a href="/articles" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800">Articles</a>
+    <a href="/search" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800">Search</a>
+    <a href="/about" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800">About</a>
+
+    <div class="mt-auto pt-4 text-xs text-gray-500">
+      © {new Date().getFullYear()} Muhayat Techlabs
+    </div>
+  </aside>
+
+  <style>
+    /* Drawer mechanics (tanpa JS framework) */
+    .drawer-open #drawerOverlay{ display:block; background:rgba(0,0,0,.18); }
+    .drawer-open aside{ transform:translateX(0); transition:transform .25s; }
+    aside{ transition:transform .25s; }
+  </style>
+</header>
