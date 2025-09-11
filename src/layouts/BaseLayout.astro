@@ -1,5 +1,11 @@
 ---
-const { title = 'Muhayat Techlabs', description = 'Website pribadi dosen untuk materi kuliah & artikel' } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title = "Muhayat Techlabs",
+  description = "Website pribadi dosen untuk materi kuliah & artikel",
+} = Astro.props;
 ---
 <html lang="id" class="scroll-smooth">
   <head>
@@ -8,15 +14,27 @@ const { title = 'Muhayat Techlabs', description = 'Website pribadi dosen untuk m
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Brand colors (bisa ganti hex sesuai kebutuhan) -->
     <style>
-        :root{
-        --brand: #0F766E; /* ganti hex ini kalau mau fine-tune */
-        --brand-600:#0E7A72; /* optional tint */
-        --brand-700:#0C645E;
-        }
+      :root{
+        --brand: #0F766E;     /* utama */
+        --brand-600:#0E7A72;  /* tint opsional */
+        --brand-700:#0C645E;  /* shade opsional */
+      }
     </style>
   </head>
-  <body class="text-gray-800 selection:bg-emerald-200/60">
-    <slot />
+
+  <body class="antialiased text-gray-800 bg-white selection:bg-emerald-200/60">
+    <!-- Header dengan logo + drawer (komponen dari langkah sebelumnya) -->
+    <Header />
+
+    <!-- Konten halaman -->
+    <main id="content" class="min-h-[60vh]">
+      <slot />
+    </main>
+
+    <!-- Footer (gunakan komponen Footer Anda) -->
+    <Footer />
   </body>
 </html>
