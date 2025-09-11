@@ -3,20 +3,55 @@ title: "Mobile Programming"
 code: "TI23042"
 description: "Mata kuliah ini membahas konsep, desain, implementasi, dan pengujian aplikasi mobile berbasis Android. Mahasiswa dibekali kemampuan teknis membangun aplikasi native menggunakan Java/Kotlin, memanfaatkan sensor, layanan API eksternal, serta menerapkan arsitektur modern seperti MVVM dan Jetpack Compose. Pendekatan pembelajaran menggunakan Outcome-Based Education (OBE) dengan penekanan pada praktik, studi kasus, dan proyek akhir."
 sessions:
-  - week: 1
-    title: "Konsep Dasar Mobile Programming dan Ekosistem Android / iOS"
-    files:
-      - { name: "Materi Kuliah 1", url: "/courses/pemrograman-web/files/01-slide.pdf", size: "1.1 MB" }
-      - { name: "Starter", url: "/courses/pemrograman-web/files/01-starter.zip", size: "240 KB" }
-    reading:
-      - { title: "MDN: Getting started", url: "https://developer.mozilla.org/" }
-  - week: 2
-    title: "Menguasai Android Studio"
-    files:
-      - { name: "Materi Kuliah 2", url: "/courses/pemrograman-web/files/02-slide.pdf", size: "1.2 MB" }
-      - { name: "Starter", url: "/courses/pemrograman-web/files/02-starter.zip", size: "260 KB" }
-    reading:
-      - { title: "MDN: HTML Basics", url: "https://developer.mozilla.org/" }
+Berikut daftar materi per minggu. Klik tombol **Download** untuk mengunduh file langsung dari Google Drive.
+---
+### Week 1: Konsep Dasar Mobile Programming
+- 📥 [Download Materi Kuliah 1](https://drive.google.com/uc?export=download&id=FILE_ID_01)
+
+### Week 2: Menguasai Android Studio
+- 📥 [Download Materi Kuliah 2](https://drive.google.com/uc?export=download&id=FILE_ID_02)
+
+### Week 3: Activity & Intent
+- 📥 [Download Materi Kuliah 3](https://drive.google.com/uc?export=download&id=FILE_ID_03)
+
+### Week 4: UI Layout dan Komponen Dasar
+- 📥 [Download Materi Kuliah 4](https://drive.google.com/uc?export=download&id=FILE_ID_04)
+
+### Week 5: Event Handling & Lifecycle
+- 📥 [Download Materi Kuliah 5](https://drive.google.com/uc?export=download&id=FILE_ID_05)
+
+### Week 6: RecyclerView & Adapter
+- 📥 [Download Materi Kuliah 6](https://drive.google.com/uc?export=download&id=FILE_ID_06)
+
+### Week 7: SharedPreferences & SQLite
+- 📥 [Download Materi Kuliah 7](https://drive.google.com/uc?export=download&id=FILE_ID_07)
+
+### Week 8: Room Database
+- 📥 [Download Materi Kuliah 8](https://drive.google.com/uc?export=download&id=FILE_ID_08)
+
+### Week 9: Networking & API REST
+- 📥 [Download Materi Kuliah 9](https://drive.google.com/uc?export=download&id=FILE_ID_09)
+
+### Week 10: JSON Parsing & Retrofit
+- 📥 [Download Materi Kuliah 10](https://drive.google.com/uc?export=download&id=FILE_ID_10)
+
+### Week 11: Materi Lanjutan (Canva Full Image, 180 MB)
+- 📥 [Download Materi Kuliah 11](https://drive.google.com/uc?export=download&id=FILE_ID_11)
+
+### Week 12: Authentication (Firebase / OAuth)
+- 📥 [Download Materi Kuliah 12](https://drive.google.com/uc?export=download&id=FILE_ID_12)
+
+### Week 13: Jetpack Compose Dasar
+- 📥 [Download Materi Kuliah 13](https://drive.google.com/uc?export=download&id=FILE_ID_13)
+
+### Week 14: MVVM Architecture
+- 📥 [Download Materi Kuliah 14](https://drive.google.com/uc?export=download&id=FILE_ID_14)
+
+### Week 15: Integrasi API Eksternal
+- 📥 [Download Materi Kuliah 15](https://drive.google.com/uc?export=download&id=FILE_ID_15)
+
+### Week 16: Final Project & Review
+- 📥 [Download Materi Kuliah 16](https://drive.google.com/uc?export=download&id=FILE_ID_16)
 ---
 Alur Perkuliahan sesuai Sub-CPMK (Capaian Pembelajaran Pembelajaran Mata Kuliah) 
 •	Minggu 1–2: Kenalan dengan mobile programming & Android Studio.
