@@ -14,8 +14,8 @@ sessions:
     files:
       - name: "Download Materi Kuliah 1"
         url: "https://drive.google.com/uc?export=download&id=16SWLzf_IAC9x1iauLtXwau8VlOgd6Toh"
-    reading:
-      - title: "Download Android Studio Narhwal 3 2025"
+    tools:
+      - title: "Link Download Android Studio Narhwal 3 2025"
         url: "https://developer.android.com/studio?hl=id"
 
   - week: 2
