@@ -1,141 +1,151 @@
 ---
-interface Props {
-  title?: string;
-  description?: string;
-}
-
-const {
-  title = "Muhayat Techlabs",
-  description = "Website pribadi dosen: materi kuliah, artikel, dan pengumuman.",
-} = Astro.props;
-
-import Header from "../components/Header.astro";
-// Jika Bapak punya Footer.astro sendiri, silakan import dan gunakan.
-// import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
-<html lang="id">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>{title}</title>
-    <meta name="description" content={description} />
-
-    <!-- OpenGraph sederhana -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url?.href ?? "https://muhayat-lab.github.io"} />
-    <meta property="og:image" content="/og.png" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- CSS variabel brand (pastikan sudah sama dgn project Bapak) -->
-    <style>
-      :root{
-        --brand: #0a8a6b;
-        --brand-600: #0b7b61;
-        --brand-700: #096e58;
-      }
-      .md-content :where(h1,h2,h3,h4){scroll-margin-top: 96px;}
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhayat Techlabs</title>
   </head>
+  <body class="antialiased bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <img
+            src="/public/MuhayatDuduk1.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full border border-gray-300 object-cover"
+          />
+          <span class="text-lg font-bold text-emerald-700">Muhayat Techlabs</span>
+        </a>
 
-  <body class="text-gray-900 antialiased">
-    <!-- ====================== HEADER ====================== -->
-    <Header />
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="/" class="hover:text-emerald-600">Home</a>
+          <a href="/#courses" class="hover:text-emerald-600">Courses</a>
+          <a href="/#articles" class="hover:text-emerald-600">Articles</a>
+          <a href="/#search" class="hover:text-emerald-600">Search</a>
+          <a href="/#about" class="hover:text-emerald-600">About</a>
+        </nav>
 
-    <!-- ====================== MAIN CONTENT ====================== -->
-    <main id="content">
-      <slot />
-    </main>
-
-    <!-- ====================== FOOTER (sederhana) ====================== -->
-    <footer class="border-t border-gray-100 mt-16">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 text-sm text-gray-500">
-        © {new Date().getFullYear()} Muhayat Techlabs. All rights reserved.
-      </div>
-    </footer>
-    <!-- Jika punya Footer.astro sendiri, ganti blok di atas dengan <Footer /> -->
-
-    <!-- ==========================================================
-         DRAWER & OVERLAY dipasang di root BODY (BUKAN di header)
-         ========================================================== -->
-    <div id="drawerOverlay" class="fixed inset-0 z-[60] hidden bg-black/30"></div>
-
-    <aside id="siteDrawer"
-      class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-xl border-l border-gray-100
-             p-5 flex flex-col gap-2 translate-x-full will-change-transform"
-      role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <img src="/muhayat.png" alt="Muhayat Techlabs" class="h-10 w-10 rounded-full ring-2 ring-[var(--brand)]/25"/>
-          <span id="drawerTitle" class="font-bold" style="color:var(--brand)">Muhayat Techlabs</span>
-        </div>
-        <button id="closeDrawer" class="p-2 rounded-lg hover:bg-gray-50" aria-label="Close menu">
+        <!-- Mobile burger -->
+        <button
+          id="openDrawer"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-50"
+          aria-label="Open menu"
+        >
           <svg viewBox="0 0 24 24" class="h-6 w-6 text-gray-700">
-            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
           </svg>
         </button>
       </div>
+    </header>
 
-      <a href="/" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Home</a>
-      <a href="/#courses" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Courses</a>
-      <a href="/articles" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Articles</a>
-      <a href="/search" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Search</a>
-      <a href="/about" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">About</a>
+    <!-- Overlay -->
+    <div
+      id="drawerOverlay"
+      class="fixed inset-0 z-40 hidden bg-black/50 transition-opacity"
+    ></div>
 
-      <div class="mt-auto pt-4 text-xs text-gray-500">
-        © {new Date().getFullYear()} Muhayat Techlabs
+    <!-- Mobile Drawer -->
+    <aside
+      id="siteDrawer"
+      class="fixed top-0 right-0 z-50 h-full w-64 translate-x-full transform bg-white shadow-lg transition-transform"
+    >
+      <div class="flex items-center justify-between border-b px-4 py-3">
+        <a href="/" class="flex items-center space-x-2">
+          <img
+            src="/public/MuhayatDuduk1.png"
+            alt="Logo"
+            class="h-10 w-10 rounded-full border border-gray-300 object-cover"
+          />
+          <span class="font-bold text-emerald-700">Muhayat Techlabs</span>
+        </a>
+        <!-- ✅ Perubahan 1: tambah data-close-drawer -->
+        <button
+          id="closeDrawer"
+          data-close-drawer
+          class="p-2 rounded-lg hover:bg-gray-50"
+          aria-label="Close menu"
+        >
+          <svg
+            data-close-drawer
+            viewBox="0 0 24 24"
+            class="h-6 w-6 text-gray-700"
+          >
+            <path
+              d="M6 6l12 12M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
       </div>
+      <nav class="flex flex-col space-y-4 p-4 text-sm font-medium">
+        <a href="/" class="drawer-link hover:text-emerald-600">Home</a>
+        <a href="/#courses" class="drawer-link hover:text-emerald-600">Courses</a>
+        <a href="/#articles" class="drawer-link hover:text-emerald-600">Articles</a>
+        <a href="/#search" class="drawer-link hover:text-emerald-600">Search</a>
+        <a href="/#about" class="drawer-link hover:text-emerald-600">About</a>
+      </nav>
+      <footer class="mt-auto border-t p-4 text-xs text-gray-500">
+        © 2025 Muhayat Techlabs
+      </footer>
     </aside>
 
-    <!-- State & animasi drawer -->
-    <style is:global>
-      #siteDrawer { transition: transform .28s ease; }
-      .drawer-open #siteDrawer { transform: translateX(0); }
-      .drawer-open #drawerOverlay { display:block; }
-      .drawer-open body { overflow: hidden; }
-    </style>
+    <!-- Main content -->
+    <main class="pt-20">
+      <slot />
+    </main>
 
-    <!-- Script kontrol drawer -->
+    <!-- ✅ Perubahan 2: script drawer event delegation -->
     <script>
       (function () {
-        const root    = document.documentElement;
-        const openBtn = document.getElementById('openDrawer');   // dari Header.astro
-        const closeBtn= document.getElementById('closeDrawer');
-        const overlay = document.getElementById('drawerOverlay');
-        const drawer  = document.getElementById('siteDrawer');
+        const root = document.documentElement;
+        const openBtn = document.getElementById("openDrawer");
+        const overlay = document.getElementById("drawerOverlay");
+        const drawer = document.getElementById("siteDrawer");
 
         function openDrawer() {
-          root.classList.add('drawer-open');
-          openBtn?.setAttribute('aria-expanded', 'true');
+          root.classList.add("drawer-open");
+          overlay.classList.remove("hidden");
+          openBtn?.setAttribute("aria-expanded", "true");
         }
         function closeDrawer() {
-          root.classList.remove('drawer-open');
-          openBtn?.setAttribute('aria-expanded', 'false');
+          root.classList.remove("drawer-open");
+          overlay.classList.add("hidden");
+          openBtn?.setAttribute("aria-expanded", "false");
         }
 
-        openBtn?.addEventListener('click', openDrawer);
-        closeBtn?.addEventListener('click', closeDrawer);
-        overlay?.addEventListener('click', closeDrawer);
-
-        // Tutup saat tekan ESC
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') closeDrawer();
+        // delegasi klik untuk tombol close
+        document.addEventListener("click", (e) => {
+          const el = e.target;
+          if (el && el.closest?.("[data-close-drawer]")) {
+            closeDrawer();
+          }
         });
 
-        // Tutup ketika user klik salah satu link drawer
-        document.querySelectorAll('.drawer-link').forEach(a => {
-          a.addEventListener('click', closeDrawer);
+        openBtn?.addEventListener("click", openDrawer);
+        overlay?.addEventListener("click", closeDrawer);
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeDrawer();
         });
 
-        // Mencegah klik di dalam panel menutup (jangan bubble ke overlay)
-        drawer?.addEventListener('click', (e) => e.stopPropagation(), true);
+        document.querySelectorAll(".drawer-link").forEach((a) => {
+          a.addEventListener("click", closeDrawer);
+        });
+
+        drawer?.addEventListener("click", (e) => e.stopPropagation());
       })();
     </script>
   </body>
