@@ -1,36 +1,41 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const q = Astro.url.searchParams.get("q") ?? "";
 ---
 
-<BaseLayout title="Search — Muhayat Techlabs" description="Pencarian konten di website Muhayat Techlabs">
+<BaseLayout
+  title="Search — Muhayat Techlabs"
+  description="Pencarian konten di website Muhayat Techlabs"
+>
   <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
     <h1 class="text-2xl md:text-3xl font-extrabold mb-4">Search</h1>
 
-    <!-- Placeholder UI sederhana -->
+    <!-- Form pencarian -->
     <form action="/search" method="GET" class="mt-2">
       <label for="q" class="sr-only">Cari</label>
       <div class="flex gap-2">
         <input
-          type="search"
           id="q"
           name="q"
+          type="search"
+          value={q}
           placeholder="Ketik kata kunci…"
-          class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[var(--brand)] focus:outline-none"
-          value={Astro.url.searchParams.get('q') ?? ''}
+          class="w-full rounded-lg border border-gray-300 px-4 py-2
+                 focus:border-[var(--brand)] focus:outline-none"
         />
         <button
-          class="rounded-lg bg-[var(--brand)] px-4 py-2 text-white hover:bg-[var(--brand-700)]"
           type="submit"
+          class="rounded-lg bg-[var(--brand)] px-4 py-2 text-white
+                 hover:bg-[var(--brand-700)]"
         >
           Cari
         </button>
       </div>
     </form>
 
-    <!-- Hasil pencarian: sementara placeholder -->
-    {Astro.url.searchParams.get('q') && (
+    {q && (
       <p class="mt-6 text-sm text-gray-500">
-        Hasil untuk: <strong>{Astro.url.searchParams.get('q')}</strong> (fitur pencarian akan diaktifkan)
+        Hasil untuk: <strong>{q}</strong> (fitur pencarian akan diaktifkan)
       </p>
     )}
   </section>
