@@ -2,7 +2,7 @@
 title: "Mobile Programming"
 code: "TI23042"
 description: "Mata kuliah ini membahas konsep, desain, implementasi, dan pengujian aplikasi mobile berbasis Android. Mahasiswa dibekali kemampuan teknis membangun aplikasi native menggunakan Java/Kotlin, memanfaatkan sensor, layanan API eksternal, serta menerapkan arsitektur modern seperti MVVM dan Jetpack Compose. Pendekatan pembelajaran menggunakan Outcome-Based Education (OBE) dengan penekanan pada praktik, studi kasus, dan proyek akhir."
----
+
 ## 📚 Materi Kuliah Mobile Programming
 
 Berikut daftar materi per minggu. Klik **Download 📥** untuk mengunduh file langsung dari Google Drive.
