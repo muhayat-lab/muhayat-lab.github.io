@@ -1,11 +1,9 @@
 ---
-import Base from '../../layouts/BaseLayout.astro';
-import Nav from '../../components/Nav.astro';
-import Footer from '../../components/Footer.astro';
-import { getCollection } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const courses = await getCollection('courses');
+  const courses = await getCollection("courses");
   return courses.map((c) => ({
     params: { slug: c.slug },
     props: { course: c },
@@ -13,12 +11,10 @@ export async function getStaticPaths() {
 }
 
 const { course } = Astro.props;
-// ✅ siapkan komponen konten Markdown
-const { Content } = await course.render();
+const { Content } = await course.render(); // render body markdown
 ---
 
-<Base title={`${course.data.title} — Muhayat Techlabs`}>
-  <Nav />
+<BaseLayout title={`${course.data.title} — Muhayat Techlabs`}>
   <main class="max-w-4xl mx-auto px-4 py-10">
     <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">
       {course.data.title}
@@ -26,7 +22,7 @@ const { Content } = await course.render();
     {course.data.code && <p class="text-xs text-gray-500 mt-1">{course.data.code}</p>}
     {course.data.description && <p class="text-sm text-gray-600 mt-2">{course.data.description}</p>}
 
-    {/* ✅ Tampilkan sesi hanya jika ada */}
+    {/* Tampilkan Sessions hanya jika ada */}
     {Array.isArray(course.data.sessions) && course.data.sessions.length > 0 && (
       <section class="mt-8">
         <h2 class="text-lg font-semibold text-gray-900">Sessions</h2>
@@ -70,10 +66,9 @@ const { Content } = await course.render();
       </section>
     )}
 
-    {/* ✅ Selalu render body Markdown (tabel Download akan muncul di sini) */}
-    <article class="md-content mt-6">
+    {/* Body markdown (mis. tabel download, catatan, dsb.) */}
+    <article class="md-content mt-8">
       <Content />
     </article>
   </main>
-  <Footer />
-</Base>
+</BaseLayout>
