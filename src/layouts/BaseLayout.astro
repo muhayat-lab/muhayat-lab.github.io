@@ -8,6 +8,13 @@ const { title = 'Muhayat Techlabs', description = 'Website pribadi dosen untuk m
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+        :root{
+        --brand: #0F766E; /* ganti hex ini kalau mau fine-tune */
+        --brand-600:#0E7A72; /* optional tint */
+        --brand-700:#0C645E;
+        }
+    </style>
   </head>
   <body class="text-gray-800 selection:bg-emerald-200/60">
     <slot />
