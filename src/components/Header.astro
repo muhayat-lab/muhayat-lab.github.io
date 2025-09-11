@@ -41,15 +41,17 @@ const logo = "/muhayat.png"; // foto Bapak di /public
     </div>
   </div>
 
-  <!-- Drawer -->
+  <!-- Overlay -->
   <div
-    class="fixed inset-0 z-[60] hidden"
+    class="fixed inset-0 z-[60] hidden transition"
     id="drawerOverlay"
     onclick="document.documentElement.classList.remove('drawer-open')">
   </div>
 
+  <!-- Drawer -->
   <aside
-    class="fixed top-0 right-0 z-[70] h-screen w-72 translate-x-full bg-white shadow-xl border-l border-gray-100 p-5 flex flex-col gap-2">
+    id="drawerMenu"
+    class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-xl border-l border-gray-100 p-5 flex flex-col gap-2 translate-x-full transition-transform duration-300">
     <div class="flex items-center justify-between mb-4">
       <div class="flex items-center gap-3">
         <img src={logo} alt={brand} class="h-10 w-10 rounded-full ring-2 ring-[var(--brand)]/25"/>
@@ -76,9 +78,13 @@ const logo = "/muhayat.png"; // foto Bapak di /public
   </aside>
 
   <style>
-    /* Drawer mechanics (tanpa JS framework) */
-    .drawer-open #drawerOverlay{ display:block; background:rgba(0,0,0,.18); }
-    .drawer-open aside{ transform:translateX(0); transition:transform .25s; }
-    aside{ transition:transform .25s; }
+    /* Drawer mechanics */
+    .drawer-open #drawerOverlay {
+      display: block;
+      background: rgba(0, 0, 0, 0.35);
+    }
+    .drawer-open #drawerMenu {
+      transform: translateX(0);
+    }
   </style>
 </header>
