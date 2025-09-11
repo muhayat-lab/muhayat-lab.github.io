@@ -1,13 +1,12 @@
 ---
-import Base from '../../layouts/BaseLayout.astro';
-import Nav from '../../components/Nav.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<Base title="About — Muhayat Techlabs">
-  <Nav />
-  <main class="max-w-3xl mx-auto px-4 py-10 prose prose-emerald">
-    <h1>About</h1>
-    <p>Website pribadi dosen untuk materi kuliah, artikel, dan pengumuman. Dibangun dengan Astro + Tailwind.</p>
-  </main>
-  <Footer />
-</Base>
+
+<BaseLayout title="About — Muhayat Techlabs" description="Tentang website Muhayat Techlabs">
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+    <h1 class="text-2xl md:text-3xl font-extrabold mb-4">About</h1>
+    <p class="text-gray-700 leading-relaxed">
+      Website pribadi dosen untuk materi kuliah, artikel, dan pengumuman. Dibangun dengan Astro + Tailwind.
+    </p>
+  </section>
+</BaseLayout>
