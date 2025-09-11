@@ -13,7 +13,7 @@ sessions:
     title: "Konsep Dasar Mobile Programming dan Ekosistem Android / iOS"
     files:
       - name: "Materi Kuliah 1"
-        url: "https://drive.google.com/uc?export=download&id=FILE_ID_01"
+        url: "https://drive.google.com/uc?export=download&id=16SWLzf_IAC9x1iauLtXwau8VlOgd6Toh"
         size: "1.1 MB"
       - name: "Starter"
         url: "https://drive.google.com/uc?export=download&id=FILE_ID_01S"
