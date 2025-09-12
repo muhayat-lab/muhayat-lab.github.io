@@ -2,117 +2,158 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-// ambil semua kursus dari src/content/courses
-const courses = await getCollection("courses");
-const list = courses.sort((a, b) => a.data.title.localeCompare(b.data.title));
+// Ambil data courses dan posts (sesuaikan koleksi dengan proyek Anda)
+const courses = (await getCollection("courses")).filter((c) => c.data.published !== false);
+const posts = (await getCollection("posts")).sort(
+  (a, b) => (new Date(b.data.date).getTime()) - (new Date(a.data.date).getTime())
+).slice(0, 3);
 
-// ambil artikel (koleksi posts)
-const posts = (await getCollection("posts"))
-  .sort((a, b) => (b.data.date ?? 0) - (a.data.date ?? 0))
-  .slice(0, 4); // tampilkan 4 terbaru
+// Ambil QOTD dari ZenQuotes (server-side)
+let quote = {
+  content: "Education is the most powerful weapon which you can use to change the world.",
+  author: "Nelson Mandela",
+  a: "Nelson Mandela", // untuk kompatibilitas script client
+  q: "Education is the most powerful weapon which you can use to change the world."
+};
+try {
+  const res = await fetch("https://zenquotes.io/api/random", { timeout: 8000 });
+  if (res.ok) {
+    const data = await res.json();
+    if (Array.isArray(data) && data[0]?.q && data[0]?.a) {
+      quote = { content: data[0].q, author: data[0].a, q: data[0].q, a: data[0].a };
+    }
+  }
+} catch (_) {
+  // pakai fallback di atas
+}
 ---
 
-<BaseLayout title="Muhayat Techlabs" description="Website pribadi dosen: materi kuliah, artikel, dan pengumuman.">
-  <!-- ========================= HERO ========================= -->
-  <section class="py-10 md:py-14">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 grid gap-8 md:grid-cols-2 md:items-center">
-      <div>
-        <p class="uppercase tracking-wide text-sm font-semibold text-[var(--brand)]">
-          Website Development & Teaching
-        </p>
-        <h1 class="mt-2 text-4xl md:text-5xl font-extrabold leading-tight">
-          Welcome! <span class="text-[var(--brand)]"></span> 
-          <span class="text-[var(--brand)]">Explore </span> the latest updates and content
-        </h1>
-        <p class="mt-4 text-gray-600">
-          Repository materi kuliah, artikel, dan pengumuman. Cepat, aman, SEO-friendly.
-        </p>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="/#courses"
-             class="inline-flex items-center px-4 py-2 rounded-lg bg-[var(--brand)] text-white hover:bg-[var(--brand-700)]">
-            Lihat Courses
-          </a>
-          <a href="/articles"
-             class="inline-flex items-center px-4 py-2 rounded-lg border border-[var(--brand)] text-[var(--brand)]
-                    hover:bg-[var(--brand-600)] hover:text-white">
-            Artikel Terbaru
-          </a>
-        </div>
+<BaseLayout
+  title="Muhayat Techlabs — Website Development & Teaching"
+  description="Gudang materi kuliah, artikel, dan pengumuman. Cepat, aman, SEO-friendly."
+>
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <p class="text-sm tracking-widest font-semibold text-[var(--brand)]">
+        WEBSITE DEVELOPMENT & TEACHING
+      </p>
+      <h1 class="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">
+        Welcome! <span class="text-[var(--brand)]">Explore</span> the latest updates and content
+      </h1>
+      <p class="mt-5 text-lg text-gray-600">
+        Repository materi kuliah, artikel, dan pengumuman. Cepat, aman, SEO-friendly.
+      </p>
+      <div class="mt-6 flex gap-3">
+        <a href="/courses" class="btn btn-brand">Lihat Courses</a>
+        <a href="/articles" class="btn btn-outline-brand">Artikel Terbaru</a>
       </div>
+    </div>
 
-      <div class="order-first md:order-none">
-        <img src="/hero.jpg" alt="Hero image" class="w-full rounded-3xl shadow-xl ring-1 ring-gray-200/70 object-cover" />
-      </div>
+    <!-- Gambar hero (silakan ganti src sesuai aset Anda) -->
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <img src="/hero.jpg" alt="Muhayat Techlabs" class="w-full h-full object-cover" loading="lazy" />
     </div>
   </section>
 
-  <!-- ========================= COURSES ========================= -->
-  <section id="courses" class="py-10 md:py-14 bg-gradient-to-b from-emerald-50/40 to-transparent">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">Courses</h2>
+  <!-- Courses -->
+  <section id="courses" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Courses</h2>
 
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        {list.map((c) => (
-          <a href={`/courses/${c.slug}/`}
-             class="block rounded-2xl ring-1 ring-gray-200/70 bg-white p-5 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold text-[var(--brand)]">{c.data.title}</h3>
-            {c.data.code && <p class="text-xs text-gray-500 mt-1">{c.data.code}</p>}
-            {c.data.description && (
-              <p class="text-sm text-gray-600 mt-2 line-clamp-3">{c.data.description}</p>
-            )}
-            <span class="mt-4 inline-flex items-center gap-1 text-sm text-[var(--brand)]">
-              Buka materi
-              <svg viewBox="0 0 20 20" class="h-4 w-4"><path d="M7 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </a>
-        ))}
-      </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {courses.map((c) => (
+        <a href={c.slug ? `/courses/${c.slug}/` : (c.data.url ?? "#")}
+           class="block rounded-xl border border-gray-200 p-6 hover:shadow-md transition bg-white">
+          <h3 class="text-lg font-semibold">{c.data.title}</h3>
+          {c.data.code && <p class="text-xs mt-1 text-gray-500">{c.data.code}</p>}
+          {c.data.description && <p class="mt-3 text-gray-600">{c.data.description}</p>}
+        </a>
+      ))}
     </div>
   </section>
 
-<!-- QOTD Section -->
-<section class="py-12 bg-gradient-to-r from-[var(--brand)] to-black text-white text-center">
-  <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Quote of the Day</h2>
-  <blockquote class="text-xl italic max-w-3xl mx-auto">
-    “{quote.content}”
-  </blockquote>
-  <p class="mt-4 font-semibold">— {quote.author}</p>
-  <div class="mt-6">
-    <button id="shuffleQuote"
-      class="bg-white text-[var(--brand)] font-medium px-4 py-2 rounded shadow hover:bg-gray-200 transition">
-      🔄 Shuffle
-    </button>
-  </div>
-  <p class="mt-2 text-sm opacity-80">Source: ZenQuotes</p>
-</section>
+  <!-- QOTD: gradient brand -> black, teks putih, tanpa card -->
+  <section class="py-12 md:py-16 text-center text-white bg-gradient-to-r from-[var(--brand)] to-black">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Quote of the Day</h2>
 
-  <!-- ========================= ARTICLES ========================= -->
-  <section id="articles" class="py-10 md:py-14">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">
-          Latest Articles
-        </h2>
-        <a href="/articles" class="text-sm text-[var(--brand)] hover:underline">Lihat semua</a>
-      </div>
+    <blockquote id="qotdText" class="text-xl italic max-w-3xl mx-auto px-4">
+      “{quote.content}”
+    </blockquote>
+    <p id="qotdAuthor" class="mt-4 font-semibold">— {quote.author}</p>
 
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        {posts.map((p) => (
-          <a href={`/articles/${p.slug}/`}
-             class="block rounded-2xl ring-1 ring-gray-200/70 bg-white p-5 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold text-[var(--brand)]">{p.data.title}</h3>
-            {p.data.date && <p class="text-xs text-gray-500 mt-1">
+    <div class="mt-6">
+      <button id="shuffleQuote"
+        class="bg-white text-[var(--brand)] font-medium px-4 py-2 rounded shadow hover:bg-gray-200 transition">
+        🔄 Shuffle
+      </button>
+    </div>
+    <p class="mt-2 text-sm opacity-80">Source: ZenQuotes</p>
+
+    <!-- Data awal untuk client -->
+    <script type="application/json" id="qotdInitial">{JSON.stringify(quote)}</script>
+    <script>
+      (function () {
+        const btn = document.getElementById('shuffleQuote');
+        const textEl = document.getElementById('qotdText');
+        const authorEl = document.getElementById('qotdAuthor');
+        let current = null;
+        try {
+          current = JSON.parse(document.getElementById('qotdInitial').textContent);
+        } catch (_) {}
+
+        async function fetchQuote() {
+          try {
+            const res = await fetch('https://zenquotes.io/api/random', { cache: 'no-store' });
+            const data = await res.json();
+            if (Array.isArray(data) && data[0]?.q && data[0]?.a) {
+              return { q: data[0].q, a: data[0].a };
+            }
+          } catch (_) { /* ignore */ }
+          return current || { q: 'Keep learning, keep growing.', a: 'Unknown' };
+        }
+
+        btn?.addEventListener('click', async () => {
+          const q = await fetchQuote();
+          textEl.textContent = `“${q.q}”`;
+          authorEl.textContent = `— ${q.a}`;
+          current = q;
+        });
+      })();
+    </script>
+  </section>
+
+  <!-- Latest Articles -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Latest Articles</h2>
+      <a href="/articles" class="text-[var(--brand)] hover:underline">Lihat semua</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {posts.map((p) => (
+        <a href={`/articles/${p.slug}/`} class="block rounded-xl border border-gray-200 p-6 hover:shadow-md transition bg-white">
+          <h3 class="text-lg font-semibold">{p.data.title}</h3>
+          {p.data.date && (
+            <p class="text-xs text-gray-500 mt-1">
               {new Date(p.data.date).toLocaleDateString("id-ID")}
-            </p>}
-            {p.data.summary && <p class="text-sm text-gray-600 mt-2 line-clamp-3">{p.data.summary}</p>}
-            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--brand)]">
-              Baca selengkapnya
-              <svg viewBox="0 0 20 20" class="h-4 w-4"><path d="M7 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </a>
-        ))}
-      </div>
+            </p>
+          )}
+          {p.data.excerpt && <p class="mt-3 text-gray-600">{p.data.excerpt}</p>}
+          <span class="inline-flex items-center gap-1 mt-4 text-[var(--brand)]">
+            Baca selengkapnya
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd" d="M4.5 12a.75.75 0 0 1 .75-.75h11.69l-3.72-3.72a.75.75 0 1 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06-1.06l3.72-3.72H5.25A.75.75 0 0 1 4.5 12Z" clip-rule="evenodd" />
+            </svg>
+          </span>
+        </a>
+      ))}
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* tombol utilitas (Tailwind-friendly) */
+  .btn{ @apply inline-flex items-center justify-center px-5 py-2 rounded-lg font-medium transition; }
+  .btn-brand{ @apply bg-[var(--brand)] text-white hover:opacity-90 shadow; }
+  .btn-outline-brand{ @apply border border-[var(--brand)] text-[var(--brand)] bg-white hover:bg-[var(--brand)] hover:text-white; }
+</style>
