@@ -71,32 +71,32 @@ const posts = (await getCollection("posts"))
     </div>
   </section>
 
-<!-- ✅ QOTD Section dengan full background brand -->
+<!-- ✅ QOTD Section dengan card putih -->
 <section id="qotd" class="w-full bg-[var(--brand)] py-16 px-4 sm:px-6">
-  <div class="max-w-4xl mx-auto text-center text-white">
-    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-6">
       Quote of the Day
     </h2>
 
     <blockquote
-      class="relative bg-white/10 backdrop-blur-sm shadow-md rounded-xl p-6 border-l-4 border-white"
+      class="relative bg-white shadow-lg rounded-xl p-6 border-l-4 border-[var(--brand)]"
       aria-live="polite"
     >
-      <p id="qotd-text" class="text-lg italic text-white">
+      <p id="qotd-text" class="text-lg italic text-[var(--brand)]">
         “Memuat kutipan terbaik untuk hari ini…”
       </p>
-      <footer id="qotd-author" class="mt-4 text-sm font-semibold text-gray-200">
+      <footer id="qotd-author" class="mt-4 text-sm font-semibold text-[var(--brand)]">
         — …
       </footer>
 
       <div class="mt-5 flex justify-center items-center gap-4">
         <button
           id="qotd-refresh"
-          class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-md border border-white hover:bg-white hover:text-[var(--brand)] transition"
+          class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-md border border-[var(--brand)] text-[var(--brand)] hover:bg-[var(--brand)] hover:text-white transition"
         >
           🔄 Shuffle
         </button>
-        <span class="text-xs text-gray-200">Source: ZenQuotes</span>
+        <span class="text-xs text-gray-500">Source: ZenQuotes</span>
       </div>
     </blockquote>
   </div>
@@ -157,6 +157,7 @@ const posts = (await getCollection("posts"))
     })();
   </script>
 </section>
+
   <!-- ========================= ARTICLES ========================= -->
   <section id="articles" class="py-10 md:py-14">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
