@@ -71,41 +71,41 @@ const posts = (await getCollection("posts"))
     </div>
   </section>
 
-<!-- ✅ QOTD Section (Dynamic) — letakkan di bawah Courses -->
-<section id="qotd" class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center">
-  <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Quote of the Day</h2>
+<!-- ✅ QOTD Section dengan full background brand -->
+<section id="qotd" class="w-full bg-[var(--brand)] py-16 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-6">
+      Quote of the Day
+    </h2>
 
-  <blockquote
-    class="relative bg-white shadow-md rounded-xl p-6 border-l-4 border-[var(--brand)]"
-    aria-live="polite"
-  >
-    <p id="qotd-text" class="text-lg italic text-gray-700">
-      “Memuat kutipan terbaik untuk hari ini…”
-    </p>
-    <footer id="qotd-author" class="mt-4 text-sm font-semibold text-gray-500">
-      — …
-    </footer>
+    <blockquote
+      class="relative bg-white/10 backdrop-blur-sm shadow-md rounded-xl p-6 border-l-4 border-white"
+      aria-live="polite"
+    >
+      <p id="qotd-text" class="text-lg italic text-white">
+        “Memuat kutipan terbaik untuk hari ini…”
+      </p>
+      <footer id="qotd-author" class="mt-4 text-sm font-semibold text-gray-200">
+        — …
+      </footer>
 
-    <!-- tombol shuffle (opsional) -->
-    <div class="mt-5">
-      <button
-        id="qotd-refresh"
-        class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-md border border-gray-300 hover:border-[var(--brand)] hover:text-[var(--brand)] transition"
-        aria-label="Ambil kutipan lain"
-      >
-        🔄 Shuffle
-      </button>
-      <span class="ml-3 text-xs text-gray-400 align-middle">Source: ZenQuotes</span>
-    </div>
-  </blockquote>
+      <div class="mt-5 flex justify-center items-center gap-4">
+        <button
+          id="qotd-refresh"
+          class="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-md border border-white hover:bg-white hover:text-[var(--brand)] transition"
+        >
+          🔄 Shuffle
+        </button>
+        <span class="text-xs text-gray-200">Source: ZenQuotes</span>
+      </div>
+    </blockquote>
+  </div>
 
-  <!-- client-side fetch + cache harian -->
   <script>
     (() => {
       const textEl   = document.getElementById("qotd-text");
       const authorEl = document.getElementById("qotd-author");
       const btn      = document.getElementById("qotd-refresh");
-
       const CACHE_KEY = "qotd-cache-v1";
       const today = new Date().toISOString().slice(0,10);
 
@@ -114,7 +114,6 @@ const posts = (await getCollection("posts"))
         authorEl.textContent = a ? `— ${a}` : "— Unknown";
       };
 
-      // fallback lokal jika API gagal
       const fallback = [
         { q: "The only way to do great work is to love what you do.", a: "Steve Jobs" },
         { q: "Quality is not an act, it is a habit.", a: "Aristotle" },
@@ -123,7 +122,6 @@ const posts = (await getCollection("posts"))
       ];
 
       async function fetchQuote(force = false) {
-        // 1) pakai cache harian jika ada
         if (!force) {
           try {
             const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
@@ -134,28 +132,21 @@ const posts = (await getCollection("posts"))
           } catch {}
         }
 
-        // 2) coba dari ZenQuotes
         try {
-          const ctrl = new AbortController();
-          const t = setTimeout(() => ctrl.abort(), 4500);
-
-          let res = await fetch("https://zenquotes.io/api/today", { signal: ctrl.signal });
+          const res = await fetch("https://zenquotes.io/api/today");
           if (!res.ok) throw new Error("not ok");
           let data = await res.json();
-          clearTimeout(t);
-
           let { q, a } = Array.isArray(data) ? data[0] : data;
+
           if (!q) {
-            // fallback: random
-            res = await fetch("https://zenquotes.io/api/random");
-            data = await res.json();
+            const r = await fetch("https://zenquotes.io/api/random");
+            data = await r.json();
             ({ q, a } = Array.isArray(data) ? data[0] : data);
           }
 
           setQuote(q, a);
           localStorage.setItem(CACHE_KEY, JSON.stringify({ q, a, date: today }));
-        } catch (e) {
-          // 3) fallback lokal
+        } catch {
           const pick = fallback[Math.floor(Math.random() * fallback.length)];
           setQuote(pick.q, pick.a);
         }
@@ -166,7 +157,6 @@ const posts = (await getCollection("posts"))
     })();
   </script>
 </section>
-
   <!-- ========================= ARTICLES ========================= -->
   <section id="articles" class="py-10 md:py-14">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
