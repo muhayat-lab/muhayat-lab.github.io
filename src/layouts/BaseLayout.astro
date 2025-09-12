@@ -1,17 +1,20 @@
 ---
-export interface Props {
+interface Props {
   title?: string;
   description?: string;
 }
 
 const {
   title = "Muhayat Techlabs",
-  description = "Website pribadi dosen untuk materi kuliah, artikel, dan pengumuman. Dibangun dengan Astro + Tailwind.",
+  description = "Website pribadi dosen: materi kuliah, artikel, dan pengumuman.",
 } = Astro.props;
+
+import Header from "../components/Header.astro";
+// Jika Bapak punya Footer.astro sendiri, silakan import dan gunakan.
+// import Footer from "../components/Footer.astro";
 ---
 
-<!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,216 +22,120 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <!-- Favicon (opsional sesuaikan dengan favicon Anda) -->
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="theme-color" content="#0f8b6e" />
+    <!-- OpenGraph sederhana -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url?.href ?? "https://muhayat-lab.github.io"} />
+    <meta property="og:image" content="/og.png" />
 
-    <style is:global>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- CSS variabel brand (pastikan sudah sama dgn project Bapak) -->
+    <style>
       :root{
-        /* Warna brand utama */
-        --brand:#0f8b6e;
-        --brand-600:#0c725a;
-        --brand-700:#0a604c;
-        --brand-800:#084e3e;
+        --brand: #0a8a6b;
+        --brand-600: #0b7b61;
+        --brand-700: #096e58;
       }
+      .md-content :where(h1,h2,h3,h4){scroll-margin-top: 96px;}
     </style>
   </head>
 
-  <body class="min-h-dvh bg-white text-slate-800 antialiased">
-    <!-- ===================== HEADER ===================== -->
-    <header
-      class="w-full bg-gradient-to-r from-[var(--brand)] to-black text-white"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between"
-      >
-        <!-- Brand -->
-        <a href="/" class="flex items-center gap-3 group">
-          <!-- Ganti src sesuai logo/foto Anda di /public -->
-          <img
-            src="/muhayat.png"
-            alt="Logo"
-            class="w-9 h-9 rounded-full ring-2 ring-white/40 group-hover:ring-white/60 transition"
-            loading="eager"
-            decoding="async"
-          />
-          <span class="text-xl sm:text-2xl font-extrabold tracking-tight">
-            Muhayat <span class="opacity-90">Techlabs</span>
-          </span>
-        </a>
+  <body class="text-gray-900 antialiased">
+    <!-- ====================== HEADER ====================== -->
+    <Header />
 
-        <!-- Nav desktop -->
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="/" class="hover:text-gray-200 transition">Home</a>
-          <a href="/courses" class="hover:text-gray-200 transition">Courses</a>
-          <a href="/articles" class="hover:text-gray-200 transition">Articles</a>
-          <a href="/search" class="hover:text-gray-200 transition">Search</a>
-          <a href="/about" class="hover:text-gray-200 transition">About</a>
-        </nav>
+    <!-- ====================== MAIN CONTENT ====================== -->
+    <main id="content">
+      <slot />
+    </main>
 
-        <!-- Tombol drawer (mobile) -->
-        <button
-          id="menuBtn"
-          class="md:hidden inline-flex items-center justify-center p-2 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/60"
-          aria-controls="mobileMenu"
-          aria-expanded="false"
-          aria-label="Open menu"
-          type="button"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+    <!-- ====================== FOOTER (sederhana) ====================== -->
+    <footer class="border-t border-gray-100 mt-16">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 text-sm text-gray-500">
+        © {new Date().getFullYear()} Muhayat Techlabs. All rights reserved.
+      </div>
+    </footer>
+    <!-- Jika punya Footer.astro sendiri, ganti blok di atas dengan <Footer /> -->
+
+    <!-- ==========================================================
+         DRAWER & OVERLAY dipasang di root BODY (BUKAN di header)
+         ========================================================== -->
+    <div id="drawerOverlay" class="fixed inset-0 z-[60] hidden bg-black/30"></div>
+
+    <aside id="siteDrawer"
+      class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-xl border-l border-gray-100
+             p-5 flex flex-col gap-2 translate-x-full will-change-transform"
+      role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <img src="/muhayat.png" alt="Muhayat Techlabs" class="h-10 w-10 rounded-full ring-2 ring-[var(--brand)]/25"/>
+          <span id="drawerTitle" class="font-bold" style="color:var(--brand)">Muhayat Techlabs</span>
+        </div>
+        <button id="closeDrawer" class="p-2 rounded-lg hover:bg-gray-50" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 text-gray-700">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
       </div>
 
-      <!-- Drawer Mobile -->
-      <div
-        id="mobileMenu"
-        class="md:hidden fixed inset-0 z-[60] hidden"
-        aria-hidden="true"
-      >
-        <!-- overlay -->
-        <div
-          id="menuOverlay"
-          class="absolute inset-0 bg-black/50"
-        ></div>
+      <a href="/" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Home</a>
+      <a href="/#courses" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Courses</a>
+      <a href="/articles" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Articles</a>
+      <a href="/search" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">Search</a>
+      <a href="/about" class="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-800 drawer-link">About</a>
 
-        <!-- panel -->
-        <aside
-          class="absolute top-0 right-0 h-full w-[80%] max-w-xs bg-white text-slate-900 shadow-xl flex flex-col"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div class="flex items-center justify-between px-4 py-4 border-b">
-            <div class="flex items-center gap-3">
-              <img
-                src="/favicon-512.png"
-                alt="Logo"
-                class="w-9 h-9 rounded-full ring-2 ring-[var(--brand)]/30"
-                loading="lazy"
-                decoding="async"
-              />
-              <span class="text-lg font-extrabold text-[var(--brand)]">
-                Muhayat Techlabs
-              </span>
-            </div>
-            <button
-              id="menuClose"
-              class="p-2 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[var(--brand)]"
-              aria-label="Close menu"
-              type="button"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-              </svg>
-            </button>
-          </div>
-
-          <nav class="px-4 py-3 space-y-4 text-base">
-            <a href="/" class="block hover:text-[var(--brand)]">Home</a>
-            <a href="/courses" class="block hover:text-[var(--brand)]">Courses</a>
-            <a href="/articles" class="block hover:text-[var(--brand)]">Articles</a>
-            <a href="/search" class="block hover:text-[var(--brand)]">Search</a>
-            <a href="/about" class="block hover:text-[var(--brand)]">About</a>
-          </nav>
-
-          <div class="mt-auto border-t px-4 py-3 text-sm text-slate-500">
-            © 2025 Muhayat Techlabs
-          </div>
-        </aside>
+      <div class="mt-auto pt-4 text-xs text-gray-500">
+        © {new Date().getFullYear()} Muhayat Techlabs
       </div>
-    </header>
-    <!-- =================== /HEADER =================== -->
+    </aside>
 
-    <!-- Konten halaman -->
-    <main class="min-h-[55vh]">
-      <slot />
-    </main>
+    <!-- State & animasi drawer -->
+    <style is:global>
+      #siteDrawer { transition: transform .28s ease; }
+      .drawer-open #siteDrawer { transform: translateX(0); }
+      .drawer-open #drawerOverlay { display:block; }
+      .drawer-open body { overflow: hidden; }
+    </style>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="w-full bg-gradient-to-r from-[var(--brand)] to-black text-white mt-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Kolom 1: Brand -->
-        <div>
-          <h2 class="text-lg font-bold">Muhayat Techlabs</h2>
-          <p class="text-sm text-gray-300 mt-2">
-            Innovating Your Digital Future 🚀
-          </p>
-        </div>
-
-        <!-- Kolom 2: Navigasi -->
-        <div>
-          <h3 class="font-semibold mb-3">Menu</h3>
-          <ul class="space-y-2">
-            <li><a href="/" class="hover:text-gray-300">Home</a></li>
-            <li><a href="/courses" class="hover:text-gray-300">Courses</a></li>
-            <li><a href="/articles" class="hover:text-gray-300">Articles</a></li>
-            <li><a href="/search" class="hover:text-gray-300">Search</a></li>
-            <li><a href="/about" class="hover:text-gray-300">About</a></li>
-          </ul>
-        </div>
-
-        <!-- Kolom 3: Sosial Media -->
-        <div>
-          <h3 class="font-semibold mb-3">Connect</h3>
-          <ul class="space-y-2">
-            <li><a href="https://github.com/muhayat-lab" target="_blank" class="hover:text-gray-300">GitHub</a></li>
-            <li><a href="https://www.linkedin.com" target="_blank" class="hover:text-gray-300">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com" target="_blank" class="hover:text-gray-300">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-700 text-center py-4 text-sm text-gray-300">
-        © 2025 Muhayat Techlabs. All rights reserved.
-      </div>
-    </footer>
-    <!-- =================== /FOOTER =================== -->
-
-    <!-- Script drawer (aman + lock scroll) -->
+    <!-- Script kontrol drawer -->
     <script>
       (function () {
-        const btn = document.getElementById('menuBtn');
-        const menu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('menuOverlay');
-        const closeBtn = document.getElementById('menuClose');
+        const root    = document.documentElement;
+        const openBtn = document.getElementById('openDrawer');   // dari Header.astro
+        const closeBtn= document.getElementById('closeDrawer');
+        const overlay = document.getElementById('drawerOverlay');
+        const drawer  = document.getElementById('siteDrawer');
 
-        const open = () => {
-          if (!menu) return;
-          menu.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-          btn?.setAttribute('aria-expanded', 'true');
-        };
+        function openDrawer() {
+          root.classList.add('drawer-open');
+          openBtn?.setAttribute('aria-expanded', 'true');
+        }
+        function closeDrawer() {
+          root.classList.remove('drawer-open');
+          openBtn?.setAttribute('aria-expanded', 'false');
+        }
 
-        const close = () => {
-          if (!menu) return;
-          menu.classList.add('hidden');
-          document.body.style.overflow = '';
-          btn?.setAttribute('aria-expanded', 'false');
-        };
+        openBtn?.addEventListener('click', openDrawer);
+        closeBtn?.addEventListener('click', closeDrawer);
+        overlay?.addEventListener('click', closeDrawer);
 
-        btn?.addEventListener('click', open);
-        closeBtn?.addEventListener('click', close);
-        overlay?.addEventListener('click', close);
-
-        // Tutup dengan ESC
+        // Tutup saat tekan ESC
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') close();
+          if (e.key === 'Escape') closeDrawer();
         });
+
+        // Tutup ketika user klik salah satu link drawer
+        document.querySelectorAll('.drawer-link').forEach(a => {
+          a.addEventListener('click', closeDrawer);
+        });
+
+        // Mencegah klik di dalam panel menutup (jangan bubble ke overlay)
+        drawer?.addEventListener('click', (e) => e.stopPropagation(), true);
       })();
     </script>
   </body>
