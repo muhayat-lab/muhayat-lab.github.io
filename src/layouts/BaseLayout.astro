@@ -2,69 +2,71 @@
 interface Props {
   title?: string;
   description?: string;
+  /** Aktifkan tipografi .prose untuk artikel (Markdown). Default: false */
+  prose?: boolean;
+  /** Lebar container: 'narrow' (artikel) | 'wide' (halaman biasa). Default otomatis dari 'prose' */
+  container?: 'narrow' | 'wide';
 }
 
 const {
   title = "Muhayat Techlabs",
   description = "Website pribadi dosen: materi kuliah, artikel, dan inspirasi menarik di bidang Teknologi Informasi.",
+  prose = false,
+  container = prose ? 'narrow' : 'wide',
 } = Astro.props;
 
 import Header from "../components/Header.astro";
-
-/* ⬇️ pastikan global.css ter-load (berisi aturan spacing & justify .prose) */
 import "../styles/global.css";
+
+const containerClass =
+  container === 'narrow'
+    ? "mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"
+    : "mx-auto max-w-6xl px-4 sm:px-6 lg:px-8";
 ---
 
 <html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>{title}</title>
     <meta name="description" content={description} />
-
-    <!-- OpenGraph sederhana -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url?.href ?? "https://muhayat-lab.github.io"} />
     <meta property="og:image" content="/og.png" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- Variabel warna brand + util kecil -->
     <style>
       :root{
-        --brand: #1C8139;
-        --brand-600: #0b7b61;
-        --brand-700: #096e58;
+        --brand:#1C8139; --brand-600:#0b7b61; --brand-700:#096e58;
       }
-      /* Scroll offset untuk heading (saat ada navbar fixed) */
-      .md-content :where(h1,h2,h3,h4){scroll-margin-top: 96px;}
+      /* Offset scroll utk heading saat ada navbar fixed */
+      .md-content :where(h1,h2,h3,h4){scroll-margin-top:96px;}
     </style>
   </head>
 
   <body class="text-gray-900 antialiased">
-    <!-- ============== HEADER ============== -->
+    <!-- HEADER -->
     <Header />
 
-    <!-- ============== MAIN CONTENT ============== -->
-    <!--
-      Catatan:
-      - Markdown yang memakai layout ini akan dirender di dalam <article class="prose">,
-        sehingga spacing antar H1/H2/H3/paragraph mengikuti Tailwind Typography + global.css.
-      - Untuk halaman non-Markdown (mis. halaman Home kustom), tetap bisa pakai komponen sendiri.
-    -->
-    <main id="content" class="md-content mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-      <article class="prose prose-lg prose-headings:font-semibold prose-a:text-[var(--brand-700)] hover:prose-a:text-[var(--brand-600)]">
-        <slot />
-      </article>
+    <!-- MAIN -->
+    <main id="content" class={`md-content ${containerClass}`}>
+      {
+        prose
+          ? (
+            /* MODE ARTIKEL: tipografi .prose + lebar sempit */
+            <article class="prose prose-lg prose-headings:font-semibold prose-a:text-[var(--brand-700)] hover:prose-a:text-[var(--brand-600)]">
+              <slot />
+            </article>
+          )
+          : (
+            /* MODE HALAMAN BIASA (Home, dst): bebas, lebar wide */
+            <div>
+              <slot />
+            </div>
+          )
+      }
     </main>
 
-    <!-- ============== FOOTER ============== -->
+    <!-- FOOTER -->
     <footer class="mt-20 text-white">
       <div class="bg-gradient-to-r from-[var(--brand)] to-black">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-5">
@@ -75,9 +77,8 @@ import "../styles/global.css";
       </div>
     </footer>
 
-    <!-- ===== Drawer & Overlay (tetap seperti sebelumnya) ===== -->
+    <!-- Drawer & overlay (tetap) -->
     <div id="drawerOverlay" class="fixed inset-0 z-[60] hidden bg-black/30"></div>
-
     <aside id="siteDrawer"
       class="fixed top-0 right-0 z-[70] h-screen w-72 bg-white shadow-xl border-l border-gray-100
              p-5 flex flex-col gap-2 translate-x-full will-change-transform"
@@ -105,44 +106,30 @@ import "../styles/global.css";
       </div>
     </aside>
 
-    <!-- Animasi & kontrol drawer -->
     <style is:global>
-      #siteDrawer { transition: transform .28s ease; }
-      .drawer-open #siteDrawer { transform: translateX(0); }
-      .drawer-open #drawerOverlay { display:block; }
-      .drawer-open body { overflow: hidden; }
+      #siteDrawer{transition:transform .28s ease;}
+      .drawer-open #siteDrawer{transform:translateX(0);}
+      .drawer-open #drawerOverlay{display:block;}
+      .drawer-open body{overflow:hidden;}
     </style>
 
     <script>
-      (function () {
-        const root    = document.documentElement;
-        const openBtn = document.getElementById('openDrawer');   // tombol dari Header.astro
-        const closeBtn= document.getElementById('closeDrawer');
-        const overlay = document.getElementById('drawerOverlay');
-        const drawer  = document.getElementById('siteDrawer');
+      (function(){
+        const root=document.documentElement;
+        const openBtn=document.getElementById('openDrawer');
+        const closeBtn=document.getElementById('closeDrawer');
+        const overlay=document.getElementById('drawerOverlay');
+        const drawer=document.getElementById('siteDrawer');
 
-        function openDrawer() {
-          root.classList.add('drawer-open');
-          openBtn?.setAttribute('aria-expanded', 'true');
-        }
-        function closeDrawer() {
-          root.classList.remove('drawer-open');
-          openBtn?.setAttribute('aria-expanded', 'false');
-        }
+        function openDrawer(){root.classList.add('drawer-open');openBtn?.setAttribute('aria-expanded','true');}
+        function closeDrawer(){root.classList.remove('drawer-open');openBtn?.setAttribute('aria-expanded','false');}
 
-        openBtn?.addEventListener('click', openDrawer);
-        closeBtn?.addEventListener('click', closeDrawer);
-        overlay?.addEventListener('click', closeDrawer);
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') closeDrawer();
-        });
-
-        document.querySelectorAll('.drawer-link').forEach(a => {
-          a.addEventListener('click', closeDrawer);
-        });
-
-        drawer?.addEventListener('click', (e) => e.stopPropagation(), true);
+        openBtn?.addEventListener('click',openDrawer);
+        closeBtn?.addEventListener('click',closeDrawer);
+        overlay?.addEventListener('click',closeDrawer);
+        document.addEventListener('keydown',e=>{if(e.key==='Escape') closeDrawer();});
+        document.querySelectorAll('.drawer-link').forEach(a=>a.addEventListener('click',closeDrawer));
+        drawer?.addEventListener('click',e=>e.stopPropagation(),true);
       })();
     </script>
   </body>
