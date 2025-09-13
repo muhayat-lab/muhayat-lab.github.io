@@ -82,12 +82,13 @@ Seorang **programmer** adalah *arsitek solusi digital* yang:
 
 ## Bahasa Pemrograman & Tren 2025
 
-- **Python** — dominan untuk data/AI & otomasi  
+- **Python** — dominan untuk data/AI & otomasi
+- **Kotlin** — dominan untuk mobile app (Android) kekinian dan sudah menjadi official bahasa pemrograman Android
 - **JavaScript/TypeScript** — tulang punggung web full-stack  
 - **SQL (PostgreSQL)** — analitik & aplikasi modern  
 - **Go/Rust** — performa tinggi & sistem berskala besar  
 
-> 🎯 **Praktis untuk pemula:** mulai dari **Python**, **JavaScript/TypeScript**, dan **SQL** sebagai fondasi.  
+> 🎯 **Praktis untuk pemula:** misalnya mulai dari **Python**, **JavaScript/TypeScript**, dan **SQL** sebagai fondasi.  
 
 ---
 
@@ -104,19 +105,19 @@ Seorang **programmer** adalah *arsitek solusi digital* yang:
 
 ---
 
-## Peta Belajar 0–90 Hari
+## Peta Belajar
 
-> 🎯 *Roadmap terstruktur untuk membangun portofolio nyata.*  
+> 🎯 *Roadmap terstruktur untuk membangun portofolio nyata.*  (Contoh: belajar pemrograman **Python**)
 
-### Hari 0–30 — Fondasi
+### Pondasi
 - Dasar **Python**, **JavaScript**, **SQL**, **Git**  
 - 10 kata kunci keamanan: hashing, salting, TLS, dasar CSRF/XSS, dll  
 
-### Hari 31–60 — Proyek Mini
+### Proyek Mini
 - Bangun **REST API** kecil + **frontend** sederhana  
 - Tambahkan **testing**, **containerize**, **deploy** ke cloud  
 
-### Hari 61–90 — Penguatan
+### Penguatan
 - Tambahkan **auth** (JWT/OAuth), **caching**, **rate-limit**  
 - Audit dependency & secret; tulis dokumentasi rapi  
 
@@ -131,7 +132,7 @@ Seorang **programmer** adalah *arsitek solusi digital* yang:
 > 📈 **Catatan:** kebutuhan talenta terus naik; portofolio proyek & keterampilan praktis memberi nilai jual tinggi.  
 
 ---
-z
+
 ## Referensi
 
 - GitHub Octoverse (tren bahasa/proyek)  
