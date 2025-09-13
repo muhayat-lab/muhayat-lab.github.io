@@ -10,8 +10,9 @@ const {
 } = Astro.props;
 
 import Header from "../components/Header.astro";
-// Jika Bapak punya Footer.astro sendiri, silakan import dan gunakan.
-// import Footer from "../components/Footer.astro";
+
+/* ⬇️ pastikan global.css ter-load (berisi aturan spacing & justify .prose) */
+import "../styles/global.css";
 ---
 
 <html lang="id">
@@ -34,41 +35,47 @@ import Header from "../components/Header.astro";
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- CSS variabel brand (pastikan sudah sama dgn project Bapak) -->
+    <!-- Variabel warna brand + util kecil -->
     <style>
       :root{
         --brand: #1C8139;
         --brand-600: #0b7b61;
         --brand-700: #096e58;
       }
+      /* Scroll offset untuk heading (saat ada navbar fixed) */
       .md-content :where(h1,h2,h3,h4){scroll-margin-top: 96px;}
     </style>
   </head>
 
   <body class="text-gray-900 antialiased">
-    <!-- ====================== HEADER ====================== -->
+    <!-- ============== HEADER ============== -->
     <Header />
 
-    <!-- ====================== MAIN CONTENT ====================== -->
-    <main id="content">
-      <slot />
+    <!-- ============== MAIN CONTENT ============== -->
+    <!--
+      Catatan:
+      - Markdown yang memakai layout ini akan dirender di dalam <article class="prose">,
+        sehingga spacing antar H1/H2/H3/paragraph mengikuti Tailwind Typography + global.css.
+      - Untuk halaman non-Markdown (mis. halaman Home kustom), tetap bisa pakai komponen sendiri.
+    -->
+    <main id="content" class="md-content mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <article class="prose prose-lg prose-headings:font-semibold prose-a:text-[var(--brand-700)] hover:prose-a:text-[var(--brand-600)]">
+        <slot />
+      </article>
     </main>
 
-    <!-- ====================== FOOTER ====================== -->
-<footer class="mt-20 text-white">
-  <div class="bg-gradient-to-r from-[var(--brand)] to-black">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-5">
-        <!-- Credit -->
-      <div class="border-t border-white/10 pt-4 text-sm text-white/70">
-        © {new Date().getFullYear()} Muhayat Techlabs. All rights reserved.
+    <!-- ============== FOOTER ============== -->
+    <footer class="mt-20 text-white">
+      <div class="bg-gradient-to-r from-[var(--brand)] to-black">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-5">
+          <div class="border-t border-white/10 pt-4 text-sm text-white/70">
+            © {new Date().getFullYear()} Muhayat Techlabs. All rights reserved.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-    <!-- ==========================================================
-         DRAWER & OVERLAY dipasang di root BODY (BUKAN di header)
-         ========================================================== -->
+    <!-- ===== Drawer & Overlay (tetap seperti sebelumnya) ===== -->
     <div id="drawerOverlay" class="fixed inset-0 z-[60] hidden bg-black/30"></div>
 
     <aside id="siteDrawer"
@@ -98,7 +105,7 @@ import Header from "../components/Header.astro";
       </div>
     </aside>
 
-    <!-- State & animasi drawer -->
+    <!-- Animasi & kontrol drawer -->
     <style is:global>
       #siteDrawer { transition: transform .28s ease; }
       .drawer-open #siteDrawer { transform: translateX(0); }
@@ -106,11 +113,10 @@ import Header from "../components/Header.astro";
       .drawer-open body { overflow: hidden; }
     </style>
 
-    <!-- Script kontrol drawer -->
     <script>
       (function () {
         const root    = document.documentElement;
-        const openBtn = document.getElementById('openDrawer');   // dari Header.astro
+        const openBtn = document.getElementById('openDrawer');   // tombol dari Header.astro
         const closeBtn= document.getElementById('closeDrawer');
         const overlay = document.getElementById('drawerOverlay');
         const drawer  = document.getElementById('siteDrawer');
@@ -128,17 +134,14 @@ import Header from "../components/Header.astro";
         closeBtn?.addEventListener('click', closeDrawer);
         overlay?.addEventListener('click', closeDrawer);
 
-        // Tutup saat tekan ESC
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape') closeDrawer();
         });
 
-        // Tutup ketika user klik salah satu link drawer
         document.querySelectorAll('.drawer-link').forEach(a => {
           a.addEventListener('click', closeDrawer);
         });
 
-        // Mencegah klik di dalam panel menutup (jangan bubble ke overlay)
         drawer?.addEventListener('click', (e) => e.stopPropagation(), true);
       })();
     </script>
