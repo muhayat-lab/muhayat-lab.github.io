@@ -120,8 +120,6 @@ Seorang **programmer** adalah *arsitek solusi digital* yang:
 - Tambahkan **auth** (JWT/OAuth), **caching**, **rate-limit**  
 - Audit dependency & secret; tulis dokumentasi rapi  
 
-> 🔗 Baca juga: [JavaScript Dasar untuk Pemula](/articles/js-dasar) · [HTML & CSS Modern](/articles/html-css-modern)  
-
 ---
 
 ## Peluang Karir di Indonesia
@@ -133,20 +131,7 @@ Seorang **programmer** adalah *arsitek solusi digital* yang:
 > 📈 **Catatan:** kebutuhan talenta terus naik; portofolio proyek & keterampilan praktis memberi nilai jual tinggi.  
 
 ---
-
-## FAQ
-
-**Bahasa terbaik untuk memulai?**  
-Mulai dari **Python** (logika & otomasi), lanjut **JavaScript/TypeScript** (web), plus **SQL** (data).  
-
-**Perlu gelar?**  
-Tidak wajib. Portofolio proyek nyata, dasar CS yang kuat, dan konsistensi belajar sangat menentukan.  
-
-**Cara bangun portofolio cepat?**  
-Ikuti **peta 0–90 hari**: 2–3 proyek end-to-end (API, frontend, deploy) + README & dokumentasi.  
-
----
-
+z
 ## Referensi
 
 - GitHub Octoverse (tren bahasa/proyek)  
