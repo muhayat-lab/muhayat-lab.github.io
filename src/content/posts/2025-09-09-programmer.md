@@ -14,7 +14,7 @@ tags:
 cover: "/assets/articles/programmer-hero.webp"
 ---
 
-> ✍️**Muhayat, M.IT**  
+> ✍️ **Muhayat, M.IT**  
 > 💡 **Ringkasan waktu baca:** 3–5 menit  
 > 🏷️ **Kategori:** Teknologi Informasi  
 
