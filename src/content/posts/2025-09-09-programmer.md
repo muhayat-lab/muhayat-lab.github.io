@@ -1,9 +1,16 @@
 ---
 title: "Panduan Lengkap Programmer: Dari Belajar Coding hingga Karir Digital Masa Depan"
 date: "2025-09-09"
+description: "Panduan praktis dan lengkap: dari belajar coding, skill inti, peta belajar 0–90 hari, hingga peluang karir digital di Indonesia."
 author: "Muhayat, M.IT"
-description: "Panduan praktis dan lengkap…"
-tags: [programmer, belajar coding, karir digital]
+tags:
+  - programmer
+  - belajar coding
+  - karir digital
+  - Python
+  - JavaScript
+  - SQL
+  - DevOps
 cover: "/assets/articles/programmer-hero.webp"
 ---
 
