@@ -51,3 +51,27 @@
   margin: .5rem 0 .75rem;
   padding-left: 1.25rem;
 }
+
+/* Styling artikel Markdown dengan Tailwind @apply */
+.prose h1 {
+  @apply mt-12 mb-6;   /* margin-top: 3rem; margin-bottom: 1.5rem */
+}
+
+.prose h2 {
+  @apply mt-10 mb-4;   /* margin-top: 2.5rem; margin-bottom: 1rem */
+}
+
+.prose h3 {
+  @apply mt-8 mb-3;    /* margin-top: 2rem; margin-bottom: 0.75rem */
+}
+
+.prose p {
+  @apply mb-5;         /* margin-bottom: 1.25rem */
+  text-align: justify; /* Tailwind belum ada util justify text secara penuh */
+}
+
+.prose ul,
+.prose ol {
+  @apply mt-4 mb-5;    /* margin-top: 1rem; margin-bottom: 1.25rem */
+}
+
