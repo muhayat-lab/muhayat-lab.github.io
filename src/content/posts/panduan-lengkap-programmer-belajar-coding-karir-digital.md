@@ -15,7 +15,7 @@ cover: "/assets/articles/programmer-hero.webp"
 ---
 
 > ✍️ **Muhayat, M.IT**  
-> 🏷️ **Kategori:** Teknologi Informasi  
+> 🏷️ **Kategori:** Software Engineering  
 
 
 Programmer bukan sekadar menulis kode. Mereka merancang solusi digital, mengimplementasikan, menguji, merilis, dan merawat perangkat lunak agar **bermanfaat**, **andal**, dan **aman**. Ekonomi digital Indonesia terus tumbuh—ini momen tepat untuk menekuni bidang ini.
