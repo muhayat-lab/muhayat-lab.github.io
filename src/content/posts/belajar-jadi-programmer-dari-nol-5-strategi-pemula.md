@@ -56,7 +56,8 @@ Data terbaru menunjukkan:
 - **Python** — bahasa populer di GitHub 2024, unggul di AI & data.  
 - **JavaScript/TypeScript** — tulang punggung web modern; paling sering dipakai menurut survei Stack Overflow.  
 - **SQL (PostgreSQL)** — basis data favorit profesional.  
-- **Rust** — bahasa paling dikagumi developer dalam 2 tahun terakhir.  
+- **Rust** — bahasa paling dikagumi developer dalam 2 tahun terakhir.
+- **Kotlin** — bahasa pemrograman modern yang paling direkomendasikan oleh Google untuk pengembangan aplikasi mobile (Android).  
 
 > 🎯 **Rekomendasi pemula:** mulai dari **Python** + **JavaScript** + **SQL** sebagai fondasi.
 
@@ -109,21 +110,21 @@ Contoh proyek pemula:
 
 ---
 
-## Roadmap 90 Hari
+## Roadmap Belajar
 
-> 🎯 *Rencana 3 bulan untuk portofolio siap kerja.*
+> 🎯 *Rencana belajar untuk portofolio siap kerja.*
 
-### Hari 0–30 — Fondasi
+### Fondasi
 - Dasar Python, JavaScript, SQL  
 - Git: commit, branch, pull request  
 - Konsep dasar keamanan (hashing, salting, XSS/CSRF basic)  
 
-### Hari 31–60 — Proyek Mini
+### Proyek Mini
 - Bangun REST API + frontend sederhana  
 - Hubungkan dengan database  
 - Deploy ke cloud (misalnya: Vercel, Render, atau Railway)  
 
-### Hari 61–90 — Penguatan
+### Penguatan
 - Tambahkan autentikasi (JWT/OAuth)  
 - Implementasikan caching & rate-limit  
 - Tulis dokumentasi + testing otomatis  
@@ -137,7 +138,7 @@ Contoh proyek pemula:
 - 🏢 **Enterprise** → integrasi sistem & analitik data besar  
 - 🏛️ **Pemerintah** → e-government, smart city, layanan publik  
 
-> 📈 **Catatan:** dengan roadmap yang tepat, pemula bisa siap masuk industri dalam 6–12 bulan.
+> 📈 **Catatan:** dengan roadmap yang tepat, pemula bisa siap masuk industri dalam hitungan bulan.
 
 ---
 
@@ -147,7 +148,7 @@ Contoh proyek pemula:
 👉 Python (mudah & serbaguna) + JavaScript (web) + SQL (data).  
 
 **Apakah harus kuliah?**  
-👉 Tidak wajib, tapi fondasi teori CS tetap penting. Portofolio bisa lebih menentukan.  
+👉 Kuliah penting agar fondasi teori CS jadi matang, namun tidak kuliah pun juga bisa, karena Portofolio bisa lebih menentukan.  
 
 **Berapa lama sampai bisa kerja?**  
 👉 Dengan disiplin, 6–12 bulan sudah cukup untuk entry-level.  
