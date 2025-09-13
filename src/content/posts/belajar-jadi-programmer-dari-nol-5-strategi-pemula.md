@@ -15,7 +15,7 @@ cover: "/assets/articles/programmer-beginner.webp"
 ---
 
 > ✍️ **Muhayat, M.IT**  
-> 🏷️ **Kategori:** Teknologi Informasi  
+> 🏷️ **Kategori:** Software Engineering  
 
 Memulai karir sebagai **programmer** tidak lagi sesulit yang dibayangkan. Dengan strategi yang tepat, pemula bisa melangkah dari **nol** hingga memiliki **portofolio nyata** hanya dalam waktu beberapa bulan. Artikel ini membahas **5 strategi efektif** yang bisa Anda terapkan di tahun 2025.
 
