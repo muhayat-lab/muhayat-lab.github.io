@@ -14,9 +14,10 @@ tags:
 cover: "/assets/articles/programmer-hero.webp"
 ---
 
-> 💡 **Ringkasan waktu baca:** 7–9 menit  
+> ✍️**Muhayat, M.IT**  
+> 💡 **Ringkasan waktu baca:** 3–5 menit  
 > 🏷️ **Kategori:** Teknologi Informasi  
-> 📅 **Tanggal:** 9/9/2025  
+
 
 Programmer bukan sekadar menulis kode. Mereka merancang solusi digital, mengimplementasikan, menguji, merilis, dan merawat perangkat lunak agar **bermanfaat**, **andal**, dan **aman**. Ekonomi digital Indonesia terus tumbuh—ini momen tepat untuk menekuni bidang ini.
 
