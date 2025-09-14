@@ -12,7 +12,7 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1YgviO7p5pcTJq2z8woltJrDR87xoaRi0"
     reading:
       - title: "Link Download Tool Praktikum - Postman"
-        url: "(https://web.postman.com/)"
+        url: "https://web.postman.com"
 
   # - week: 2
   #   title: "Menguasai Android Studio"
