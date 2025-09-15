@@ -6,6 +6,8 @@ sessions:
   - week: 1
     title: "The Fundamental of Web Service Engineering"
     files:
+      - name: "Download RPS WSE"
+        url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
       - name: "Download Materi Kuliah 1"
         url: "https://drive.google.com/uc?export=download&id=1deIRdHUtB1qOue1hFSW7GTz0BLccmYdJ"
       - name: "Download Materi Praktikum Kuliah 1"
