@@ -10,6 +10,8 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=18gX3xKJcG-T16aXH7N0wiKiQ_Fi-UBZo"    
       - name: "Download Materi Kuliah 1"
         url: "https://drive.google.com/uc?export=download&id=16SWLzf_IAC9x1iauLtXwau8VlOgd6Toh"
+      - name: "Download Modul Praktikum 1"
+        url: "https://drive.google.com/uc?export=download&id=1V-WekkkTUcPrrwb4i3lbQ17jdWZNlbAu"        
     reading:
       - title: "Link Download Android Studio Narhwal 3 2025"
         url: "https://developer.android.com/studio?hl=id"
