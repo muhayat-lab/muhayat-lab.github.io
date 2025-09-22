@@ -10,14 +10,12 @@ tags:
   - karir digital
   - gaji IT
 cover: "/assets/articles/software-engineer-profesional.webp"
-series: "Seri Belajar Programmer"
 ---
 
 # Cara Menjadi Software Engineer Profesional: Skill Teknis, Soft Skill, dan Gaji di 2025
 
-> 📚 **Seri Belajar Programmer · Artikel 3 dari 3**  
 > ✍️ **Muhayat, M.IT**  
-> 🏷️ **Kategori:** Teknologi Informasi  
+> 🏷️ **Kategori:** Software Engineering  
 
 ## Mengapa profesi ini relevan sekarang?
 
@@ -87,19 +85,19 @@ series: "Seri Belajar Programmer"
 
 ---
 
-## Roadmap 90 Hari
+## Roadmap Menjadi Software Engineering
 
-### Hari 0–30 – Fondasi
+### Fondasi
 - Kuasai Python/TypeScript + SQL.  
 - Bangun REST API kecil dengan unit test.  
 - Pahami HTTP, JSON, dan Git dasar.  
 
-### Hari 31–60 – Proyek Mini
+### Proyek Mini
 - Tambahkan frontend sederhana (Next.js).  
 - Integrasi DB (Postgres).  
 - Deploy ke Vercel/Render.  
 
-### Hari 61–90 – Siap Rilis
+### Siap Rilis
 - Tambahkan auth (JWT/OAuth), caching, rate-limit.  
 - Dokumentasi API (Swagger).  
 - Testing E2E + audit dependency.  
@@ -112,19 +110,6 @@ series: "Seri Belajar Programmer"
 - Mengabaikan keamanan → berisiko di Indonesia yang rawan serangan siber.  
 - Belajar terlalu banyak framework sekaligus → kurang fokus.  
 - Tidak membiasakan *code review* & observabilitas.  
-
----
-
-## FAQ
-
-**Apakah harus kuliah CS?**  
-Tidak wajib. Bootcamp/otodidak bisa berhasil asal punya fondasi + proyek nyata.  
-
-**Bahasa terbaik untuk mulai?**  
-Python (serbaguna) atau TypeScript (web) + SQL (data).  
-
-**Berapa lama hingga siap kerja?**  
-Dengan disiplin, **6–12 bulan** cukup untuk entry-level.  
 
 ---
 
