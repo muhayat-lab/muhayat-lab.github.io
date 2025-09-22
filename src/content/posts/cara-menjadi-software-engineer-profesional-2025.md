@@ -14,24 +14,6 @@ cover: "/assets/articles/programmer-beginner.webp"
 
 > ✍️ **Muhayat, M.IT**  
 > 🏷️ **Kategori:** Software Engineering  
----
-title: "Cara Menjadi Software Engineer Profesional: Skill Teknis, Soft Skill, dan Gaji di 2025"
-slug: "cara-menjadi-software-engineer-profesional-2025"
-description: "Panduan lengkap Software Engineer 2025: definisi, tugas, skill teknis & soft skill, roadmap 90 hari, kisaran gaji di Indonesia, serta tren teknologi terbaru."
-author: "Muhayat, M.IT"
-tags:
-  - software engineer
-  - programmer
-  - skill teknologi
-  - karir digital
-  - gaji IT
-cover: "/assets/articles/software-engineer-profesional.webp"
----
-
-# Cara Menjadi Software Engineer Profesional: Skill Teknis, Soft Skill, dan Gaji di 2025
-
-> ✍️ **Muhayat, M.IT**  
-> 🏷️ **Kategori:** Software Engineering  
 
 ## Mengapa profesi ini relevan sekarang?
 
