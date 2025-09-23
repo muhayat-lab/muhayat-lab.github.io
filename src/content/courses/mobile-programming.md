@@ -18,14 +18,13 @@ sessions:
       - title: "Link Official Website Kotlin"
         url: "https://kotlinlang.org"        
 
-- week: 2
-  title: "Mendesain Antarmuka Aplikasi Android (Layout, Views, ConstraintLayout)"
-  files:
+  - week: 2
+    title: "Mendesain Antarmuka Aplikasi Android - Layout, Views, ConstraintLayout"
+    files:
       - name: "Download Materi Kuliah 2"
         url: "https://drive.google.com/uc?export=download&id=1PrxYJBByLN_clWG5FQv8_Q9H5cy1u-qE"
       - name: "Download Modul Praktikum 2"
-        url: "https://drive.google.com/uc?export=download&id=1uMBRcbryOMScBV5dUPKQnY5JjElf74XN"
-
+        url: "https://drive.google.com/uc?export=download&id=1uMBRcbryOMScBV5dUPKQnY5JjElf74XN"        
 
   # - week: 3
   #   title: "Activity & Intent"
