@@ -15,7 +15,33 @@ sessions:
     reading:
       - title: "Link Download Tool Praktikum - Postman"
         url: "https://web.postman.com"
-       
+        
+  - week: 1
+    title: "The Fundamental of Web Service Engineering"
+    files:
+      - name: "Download RPS WSE"
+        url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
+      - name: "Download Materi Kuliah 1"
+        url: "https://drive.google.com/uc?export=download&id=1deIRdHUtB1qOue1hFSW7GTz0BLccmYdJ"
+      - name: "Download Materi Praktikum Kuliah 1"
+        url: "https://drive.google.com/uc?export=download&id=1YgviO7p5pcTJq2z8woltJrDR87xoaRi0"
+    reading:
+      - title: "Link Download Tool Praktikum - Postman"
+        url: "https://web.postman.com"
+
+  - week: 1
+    title: "The Fundamental of Web Service Engineering"
+    files:
+      - name: "Download RPS WSE"
+        url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
+      - name: "Download Materi Kuliah 1"
+        url: "https://drive.google.com/uc?export=download&id=1deIRdHUtB1qOue1hFSW7GTz0BLccmYdJ"
+      - name: "Download Materi Praktikum Kuliah 1"
+        url: "https://drive.google.com/uc?export=download&id=1YgviO7p5pcTJq2z8woltJrDR87xoaRi0"
+    reading:
+      - title: "Link Download Tool Praktikum - Postman"
+        url: "https://web.postman.com"
+          
 
   # - week: 2
   #   title: "Menguasai Android Studio"
