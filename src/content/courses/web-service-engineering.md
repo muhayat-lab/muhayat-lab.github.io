@@ -8,52 +8,39 @@ sessions:
     files:
       - name: "Download RPS WSE"
         url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
-      - name: "Download Materi Kuliah 1"
+      - name: "Download Slide Kuliah #1"
         url: "https://drive.google.com/uc?export=download&id=1deIRdHUtB1qOue1hFSW7GTz0BLccmYdJ"
-      - name: "Download Materi Praktikum Kuliah 1"
+      - name: "Download Buku Ajar #1 The Fundamental of Web Service"
+        url: "https://drive.google.com/uc?export=download&id=1NdXx8-ueuubxXPyKncyN9J17W8GuO7NJ"
+      - name: "Download Modul Praktikum #1 Demo Testing API (Application Programming Interface)"
         url: "https://drive.google.com/uc?export=download&id=1YgviO7p5pcTJq2z8woltJrDR87xoaRi0"
     reading:
       - title: "Link Download Tool Praktikum - Postman"
         url: "https://web.postman.com"
         
-  - week: 1
-    title: "The Fundamental of Web Service Engineering"
+  - week: 2
+    title: "Componen of Web Service"
     files:
-      - name: "Download RPS WSE"
-        url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
-      - name: "Download Materi Kuliah 1"
-        url: "https://drive.google.com/uc?export=download&id=1deIRdHUtB1qOue1hFSW7GTz0BLccmYdJ"
-      - name: "Download Materi Praktikum Kuliah 1"
-        url: "https://drive.google.com/uc?export=download&id=1YgviO7p5pcTJq2z8woltJrDR87xoaRi0"
-    reading:
-      - title: "Link Download Tool Praktikum - Postman"
-        url: "https://web.postman.com"
+      - name: "Download Buku Ajar #2 Componen of Web Service"
+        url: "https://drive.google.com/uc?export=download&id=1bKeY8vDrI4XfmhWsd5TiXDt06kVOKT-x"
+      - name: "Download Modul Praktikum #2 Parsing data XML & JSON"
+        url: "https://drive.google.com/uc?export=download&id=1SubDVR82zMXZmXYEU74ChrNP2ZS3NuPl"
+      - name: "Download Contoh Laporan Praktikum #2"
+        url: "https://drive.google.com/uc?export=download&id=1rO8dFQN6p90dhMrdgXSfV0UecrpsYH3a"
 
-  - week: 1
-    title: "The Fundamental of Web Service Engineering"
+  - week: 3
+    title: "Web Service Architecture"
     files:
-      - name: "Download RPS WSE"
-        url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
-      - name: "Download Materi Kuliah 1"
-        url: "https://drive.google.com/uc?export=download&id=1deIRdHUtB1qOue1hFSW7GTz0BLccmYdJ"
-      - name: "Download Materi Praktikum Kuliah 1"
-        url: "https://drive.google.com/uc?export=download&id=1YgviO7p5pcTJq2z8woltJrDR87xoaRi0"
+      - name: "Download Buku Ajar #3 Web Service Architecture"
+        url: "https://drive.google.com/uc?export=download&id=16NGGs0pPasbKxKTLOajbDGUSIZR2AKn2"
+      - name: "Download Modul Praktikum #3 Web Service Architecture"
+        url: "https://drive.google.com/uc?export=download&id=1_1kWhwRmsX0DDm-8QWXTOnJW8dfCmoDM"
     reading:
-      - title: "Link Download Tool Praktikum - Postman"
-        url: "https://web.postman.com"
+      - title: "Link Download Tool Praktikum #3 - Node.js"
+        url: "https://nodejs.org/en/download"
+      - title: "Link Download Tool Praktikum #3 - Visual Studio Code"
+        url: "https://code.visualstudio.com/download"
           
-
-  # - week: 2
-  #   title: "Menguasai Android Studio"
-  #   files:
-  #     - name: "Materi Kuliah 2"
-  #       url: "https://drive.google.com/uc?export=download&id=FILE_ID_02"
-
-  # - week: 3
-  #   title: "Activity & Intent"
-  #   files:
-  #     - name: "Materi Kuliah 3"
-  #       url: "https://drive.google.com/uc?export=download&id=FILE_ID_03"
 
   # dst… sampai week 16 dikomentari dulu
 ---
