@@ -8,9 +8,9 @@ sessions:
     files:
       - name: "Download RPS MP 20251"
         url: "https://drive.google.com/uc?export=download&id=18gX3xKJcG-T16aXH7N0wiKiQ_Fi-UBZo"    
-      - name: "Download Materi Kuliah 1"
+      - name: "Download Materi Kuliah #1"
         url: "https://drive.google.com/uc?export=download&id=16SWLzf_IAC9x1iauLtXwau8VlOgd6Toh"
-      - name: "Download Modul Praktikum 1"
+      - name: "Download Modul Praktikum #1"
         url: "https://drive.google.com/uc?export=download&id=1Kum8pyks52GnqBVaFLXr4SUR800tDMxn"        
     reading:
       - title: "Link Download Android Studio Narhwal 3 2025"
@@ -21,16 +21,18 @@ sessions:
   - week: 2
     title: "Mendesain Antarmuka Aplikasi Android - Layout, Views, ConstraintLayout"
     files:
-      - name: "Download Materi Kuliah 2"
+      - name: "Download Buku Ajar #2 Mendesain Antarmuka Aplikasi Android"
         url: "https://drive.google.com/uc?export=download&id=1PrxYJBByLN_clWG5FQv8_Q9H5cy1u-qE"
-      - name: "Download Modul Praktikum 2"
+      - name: "Download Modul Praktikum #2 Layout, Views, ConstraintLayout"
         url: "https://drive.google.com/uc?export=download&id=1uMBRcbryOMScBV5dUPKQnY5JjElf74XN"        
 
-  # - week: 3
-  #   title: "Activity & Intent"
-  #   files:
-  #     - name: "Materi Kuliah 3"
-  #       url: "https://drive.google.com/uc?export=download&id=FILE_ID_03"
+  - week: 3
+    title: "Menghubungkan UI dengan Logic Pemrograman"
+    files:
+      - name: "Download Buku Ajar #3 Menghubungkan UI dengan Logic Pemrograman"
+        url: "https://drive.google.com/uc?export=download&id=1GpflSMfE45c3MhK_qv_cpzfPiKCkrjQz"
+      - name: "Download Modul Praktikum #3 UI to Logic"
+        url: "https://drive.google.com/uc?export=download&id=1CIynYmNCG6er_vm2wd_AxPoSH3cllZcO"
+        
 
-  # dst… sampai week 16 dikomentari dulu
 ---
