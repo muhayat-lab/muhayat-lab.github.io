@@ -33,6 +33,12 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1GpflSMfE45c3MhK_qv_cpzfPiKCkrjQz"
       - name: "Download Modul Praktikum #3 UI to Logic"
         url: "https://drive.google.com/uc?export=download&id=1CIynYmNCG6er_vm2wd_AxPoSH3cllZcO"
+
+  - week: 4
+    title: "Menggunakan Navigasi Aplikasi"
+    files:
+      - name: "Download Buku Ajar #4 Menggunakan Navigasi Aplikasi"
+        url: "https://drive.google.com/uc?export=download&id=1RLqb5dV0YubU1U29UbUyjAeSqL6pBqyi"
         
 
 ---
