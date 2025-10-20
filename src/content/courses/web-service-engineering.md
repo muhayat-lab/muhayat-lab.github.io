@@ -50,8 +50,8 @@ sessions:
     files:
       - name: "Download Buku Ajar #4 Web Service Developmeent Methodologies"
         url: "https://drive.google.com/uc?export=download&id=1zmPKBbtYW_VntZiSE5r-DyLHbj_N3iIW"
-  #    - name: "Download Modul Praktikum #3 Web Service Architecture"
-  #      url: "https://drive.google.com/uc?export=download&id=1a47FL79BBotk3S-YGJKoz8zbXKp-O8iY"
+      - name: "Download Modul Praktikum #4 Web Service Developmeent Methodologies (AGILE)"
+        url: "https://drive.google.com/uc?export=download&id=1wjg3pYfyBfqwo_tX7HQXVq7n8Zxm1SP4"
   #    - name: "Download Contoh Laporan Praktikum #3"
   #      url: "https://drive.google.com/uc?export=download&id=1TonNGgyVeSiar_haFIgNNZ0l-6Y2fqKR"
  #   reading:
