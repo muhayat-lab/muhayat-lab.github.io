@@ -40,6 +40,12 @@ sessions:
       - name: "Download Buku Ajar #4 Menggunakan Navigasi Aplikasi"
         url: "https://drive.google.com/uc?export=download&id=1RLqb5dV0YubU1U29UbUyjAeSqL6pBqyi"
       - name: "Download Modul Praktikum #4 Navigation; Explicit Intent, Implicit Intent, Fragment"
-        url: "https://drive.google.com/uc?export=download&id=1Kxxjs4C6CvZXdVnaFGl9JRXS5s_Vyz7g"     
+        url: "https://drive.google.com/uc?export=download&id=1Kxxjs4C6CvZXdVnaFGl9JRXS5s_Vyz7g"
+
+  - week: 5
+    title: "Menyimpan Data Sederhana"
+    files:
+      - name: "Download Modul Praktikum #5 SharedPreferences & File Handling"
+        url: "https://drive.google.com/uc?export=download&id=14FsFWvLJUTvA_h9ohHmOudwVgVbMflYy"   
 
 ---
