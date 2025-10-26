@@ -48,10 +48,16 @@ sessions:
   - week: 4
     title: "Web Service Developmeent Methodologies"
     files:
-      - name: "Download Buku Ajar #4 Web Service Developmeent Methodologies"
+      - name: "Download Buku Ajar #4 Web Service Development Methodologies"
         url: "https://drive.google.com/uc?export=download&id=1zmPKBbtYW_VntZiSE5r-DyLHbj_N3iIW"
       - name: "Download Modul Praktikum #4 Web Service Developmeent Methodologies - AGILE"
         url: "https://drive.google.com/uc?export=download&id=1wjg3pYfyBfqwo_tX7HQXVq7n8Zxm1SP4"
+
+  - week: 5
+    title: "API Design Principles"
+    files:
+      - name: "Download Buku Ajar #5 API Design Principles"
+        url: "https://drive.google.com/uc?export=download&id=1V2v4jJFWjUY9Rj-Cx52_lHr1C8Bj1V0a"
 
 
   
