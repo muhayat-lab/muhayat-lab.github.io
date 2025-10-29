@@ -48,6 +48,12 @@ sessions:
       - name: "Download Buku Ajar #5 Menyimpan Data Sederhana / SharedPreferences & File Handling"
         url: "https://drive.google.com/uc?export=download&id=1lI5nV70dt-y6YEQY3QQFwPD3amiXo3o9"
       - name: "Download Modul Praktikum #5 SharedPreferences & File Handling"
-        url: "https://drive.google.com/uc?export=download&id=14FsFWvLJUTvA_h9ohHmOudwVgVbMflYy"   
+        url: "https://drive.google.com/uc?export=download&id=14FsFWvLJUTvA_h9ohHmOudwVgVbMflYy"
+
+  - week: 6
+    title: "Menggunakan Database Lokal"
+    files:
+      - name: "Download Modul Praktikum #6 SQLite - Room ORM"
+        url: "https://drive.google.com/uc?export=download&id=1TSeXiicqwabk3a1qqkE56BDXOqD_EcrE"   
 
 ---
