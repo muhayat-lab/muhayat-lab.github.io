@@ -66,13 +66,5 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=12Fux4X6SCcKVKRPlpuAthL4iWvEmL73e"
       - name: "Contoh Laporan Praktikum #6"
         url: "https://drive.google.com/uc?export=download&id=1_o5HSr07V7LJMYE4QQJgj30s8Q5y_ESw"
-
-    - week: 8
-      title: "Secure & Observable RESTful CRUD API - JWT + Hardening + Observability"
-      files:
-      - name: "Download Modul Praktikum #8 Secure & Observable RESTful CRUD API - JWT + Hardening + Observability"
-        url: "https://drive.google.com/uc?export=download&id=15JGwJh2CE4GZ4-PXZ2qjtp1mO5G446zG"
-
-
-        
+      
 ---
