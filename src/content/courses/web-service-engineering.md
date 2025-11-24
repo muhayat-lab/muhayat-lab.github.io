@@ -62,10 +62,6 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1wbKGO4W2ND6znMcwUINFWq_XoY3Ts0bT"
       - name: "Contoh Laporan Praktikum #5"
         url: "https://drive.google.com/uc?export=download&id=1YK0tJF2QENt6t_TYNCS7jFIKAKW2_aG-"
-      - name: "Download Modul Praktikum #6 RESTful API Best Practices with 7 Principles"
-        url: "https://drive.google.com/uc?export=download&id=12Fux4X6SCcKVKRPlpuAthL4iWvEmL73e"
-      - name: "Contoh Laporan Praktikum #6"
-        url: "https://drive.google.com/uc?export=download&id=1_o5HSr07V7LJMYE4QQJgj30s8Q5y_ESw"
 
   - week: 6
     title: "RESTful API Best Practices with 7 Principles - Express"
