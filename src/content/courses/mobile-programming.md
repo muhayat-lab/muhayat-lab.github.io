@@ -54,6 +54,12 @@ sessions:
     title: "Menggunakan Database Lokal"
     files:
       - name: "Download Modul Praktikum #6 SQLite - Room ORM"
-        url: "https://drive.google.com/uc?export=download&id=1TSeXiicqwabk3a1qqkE56BDXOqD_EcrE"   
+        url: "https://drive.google.com/uc?export=download&id=1TSeXiicqwabk3a1qqkE56BDXOqD_EcrE"
+        
+  - week: 7
+    title: "Menerapkan Desain UI Modern"
+    files:
+      - name: "Download Modul Praktikum #7 Menerapkan Desain UI Modern"
+        url: "https://drive.google.com/uc?export=download&id=18t_1Aeszp-fs-PzqARp5wmf6fJfX5xy8"   
 
 ---
