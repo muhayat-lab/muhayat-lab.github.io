@@ -74,12 +74,18 @@ sessions:
     files:
       - name: "Download Modul Praktikum #7 Meningkatkan Keamanan, Logging, dan Monitoring pada RESTful API - Express"
         url: "https://drive.google.com/uc?export=download&id=164gXwm4YqelSBWOYhhGkBIhF58EZpRfe"
-        
+
   - week: 8
     title: "Secure & Observable RESTful CRUD API + JWT + Hardening + Observability"
     files:
       - name: "Download Modul Praktikum #8 Secure & Observable RESTful CRUD API + JWT + Hardening + Observability"
         url: "https://drive.google.com/uc?export=download&id=15JGwJh2CE4GZ4-PXZ2qjtp1mO5G446zG"
+        
+  - week: 9
+    title: "Integrasi API eksternal - Node.js, struktur modular"
+    files:
+      - name: "Download Modul Praktikum #9 Integrasi API eksternal - Node.js, struktur modular"
+        url: "https://drive.google.com/uc?export=download&id=1iOZG9BxW4G3pVre7vVcM-jgzMewKXZBo"
 
       
       
