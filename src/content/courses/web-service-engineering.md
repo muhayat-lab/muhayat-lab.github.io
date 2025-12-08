@@ -80,12 +80,18 @@ sessions:
     files:
       - name: "Download Modul Praktikum #8 Secure & Observable RESTful CRUD API + JWT + Hardening + Observability"
         url: "https://drive.google.com/uc?export=download&id=15JGwJh2CE4GZ4-PXZ2qjtp1mO5G446zG"
-        
+
   - week: 9
     title: "Integrasi API eksternal - Node.js, struktur modular"
     files:
       - name: "Download Modul Praktikum #9 Integrasi API eksternal - Node.js, struktur modular"
         url: "https://drive.google.com/uc?export=download&id=1iOZG9BxW4G3pVre7vVcM-jgzMewKXZBo"
+        
+  - week: 10
+    title: "Memahami Konsep Keamanan API"
+    files:
+      - name: "Download Modul Praktikum #10 Simulasi API Key & OAuth 2.0"
+        url: "https://drive.google.com/uc?export=download&id=1d08G7rOMA1zFvwd8Br0QvJrZpGBCVtbL"
 
       
       
