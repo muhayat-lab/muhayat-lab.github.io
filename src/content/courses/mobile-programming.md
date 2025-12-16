@@ -60,6 +60,12 @@ sessions:
     title: "Menerapkan Desain UI Modern"
     files:
       - name: "Download Modul Praktikum #7 Menerapkan Desain UI Modern"
-        url: "https://drive.google.com/uc?export=download&id=18t_1Aeszp-fs-PzqARp5wmf6fJfX5xy8"   
+        url: "https://drive.google.com/uc?export=download&id=18t_1Aeszp-fs-PzqARp5wmf6fJfX5xy8"  
+
+  - week: 8
+    title: "Menggunakan Multimedia"
+    files:
+      - name: "Download Modul Praktikum #8 Menggunakan Multimedia"
+        url: "https://drive.google.com/uc?export=download&id=1FOv0Fbi8jkSzmDBgIaHzLzjJO3qJfF3-"   
 
 ---
