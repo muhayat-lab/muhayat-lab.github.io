@@ -1,6 +1,6 @@
 ---
 title: "Big Data Technology"
-code: "TI23045"
+code: "TI23035"
 description: "Mata kuliah ini membahas konsep, desain, implementasi, keamanan, dan pengelolaan Web Service berbasis RESTful dan SOAP. Mahasiswa dibekali kemampuan teknis membangun, mendokumentasikan, menguji, dan mendeploy Web Service baik di lingkungan lokal maupun cloud computing. Pendekatan pembelajaran menggunakan Outcome-Based Education (OBE) dengan penekanan pada praktik, studi kasus, dan mini project."
 sessions:
   - week: 1
