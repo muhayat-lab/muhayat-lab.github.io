@@ -28,7 +28,13 @@ sessions:
 
   - week: 5
     title: "Batch Processing - MapReduce, Spark"
-
+    files:
+      - name: "Materi Kuliah #5"
+        url: "https://drive.google.com/uc?export=download&id="
+      - name: "Modul Praktikum 2 Batch Data Ingestion & Processing with Spark"
+        url: "https://drive.google.com/uc?export=download&id=1hFNBVIthMlDXrD_C3HVH9hQ3OoPgLfN6"
+      - name: "Dataset Praktikum 2 : ecommerce_raw.csv"
+        url: "https://drive.google.com/uc?export=download&id=1jHFO-fk3YGI0VmYQMOjPJkUbA-GSOz7Q"
         
   - week: 6
     title: "Stream Processing - Kafka, Spark Streaming"
