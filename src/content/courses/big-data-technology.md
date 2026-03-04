@@ -35,6 +35,13 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1hFNBVIthMlDXrD_C3HVH9hQ3OoPgLfN6"
       - name: "Dataset Praktikum 2 : ecommerce_raw.csv"
         url: "https://drive.google.com/uc?export=download&id=1jHFO-fk3YGI0VmYQMOjPJkUbA-GSOz7Q"
+      - name: "Modul Praktikum 3 Batch Data Analytics + Visualization Layer"
+        url: "https://drive.google.com/uc?export=download&id="
+    reading:
+      - title: "Business Intelligence Platform : Power BI"
+        url: "https://powerbi.microsoft.com/desktop"
+      - title: "Business Intelligence Platform : Tableau"
+        url: "https://www.tableau.com/products/desktop-free/download"
         
   - week: 6
     title: "Stream Processing - Kafka, Spark Streaming"
