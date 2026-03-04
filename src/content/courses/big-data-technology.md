@@ -6,14 +6,11 @@ sessions:
   - week: 1
     title: "Konsep & Karakteristik Big Data - 5V"
     files:
-      - name: "Download RPS WSE"
-        url: "https://drive.google.com/uc?export=download&id="
-      - name: "Download Slide Kuliah #1"
-        url: "https://drive.google.com/uc?export=download&id="
-    reading:
-      - title: ""
-        url: ""
-        
+      - name: "RPS Teknologi Big Data"
+        url: "https://drive.google.com/uc?export=download&id=1k6A8DSZ2UUY-j72ADcTUZRWA2VmxAycP"
+      - name: "Overview Mata Kuliah Teknologi Big Data"
+        url: "https://drive.google.com/uc?export=download&id=1JT0nFWWVDoo7mvu01BZpLQZRsawFHUNS"
+       
   - week: 2
     title: "Arsitektur Big Data"
 
@@ -24,7 +21,8 @@ sessions:
 
   - week: 4
     title: "NoSQL Database - MongoDB, Cassandra"
-
+      - name: "Modul Praktikum 1 Setup Environment & Git Workflow"
+        url: "https://drive.google.com/uc?export=download&id=111Ha9bdD7soDE4hr4E3Fgqk4w7tTQrXD"
 
   - week: 5
     title: "Batch Processing - MapReduce, Spark"
