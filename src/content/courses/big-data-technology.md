@@ -36,7 +36,7 @@ sessions:
       - name: "Dataset Praktikum 2 : ecommerce_raw.csv"
         url: "https://drive.google.com/uc?export=download&id=1jHFO-fk3YGI0VmYQMOjPJkUbA-GSOz7Q"
       - name: "Modul Praktikum 3 Batch Data Analytics + Visualization Layer"
-        url: "https://drive.google.com/uc?export=download&id="
+        url: "https://drive.google.com/uc?export=download&id=1vr_bs-UC13HwKgdEKZFmynleysd7ddi3"
     reading:
       - title: "Business Intelligence Platform : Power BI"
         url: "https://powerbi.microsoft.com/desktop"
