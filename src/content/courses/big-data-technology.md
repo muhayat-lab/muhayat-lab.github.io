@@ -21,8 +21,9 @@ sessions:
 
   - week: 4
     title: "NoSQL Database - MongoDB, Cassandra"
-      - name: "Modul Praktikum 1 Setup Environment & Git Workflow"
+      - name: "Modul Praktikum 1 Setup Environment - Git Workflow"
         url: "https://drive.google.com/uc?export=download&id=111Ha9bdD7soDE4hr4E3Fgqk4w7tTQrXD"
+
 
   - week: 5
     title: "Batch Processing - MapReduce, Spark"
