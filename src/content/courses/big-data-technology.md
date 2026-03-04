@@ -22,7 +22,7 @@ sessions:
   - week: 4
     title: "NoSQL Database - MongoDB, Cassandra"
     files:
-      - name: "Modul Praktikum 1 Setup Environment & Git Workflow"
+      - name: "Modul Praktikum 1 Setup Environment - PySpark, MongoDB Atlas & Git Workflow"
         url: "https://drive.google.com/uc?export=download&id=111Ha9bdD7soDE4hr4E3Fgqk4w7tTQrXD"
 
 
@@ -38,9 +38,9 @@ sessions:
       - name: "Modul Praktikum 3 Batch Data Analytics + Visualization Layer"
         url: "https://drive.google.com/uc?export=download&id=1vr_bs-UC13HwKgdEKZFmynleysd7ddi3"
     reading:
-      - title: "Business Intelligence Platform : Power BI"
+      - title: "Download Business Intelligence Platform : Power BI Desktop"
         url: "https://powerbi.microsoft.com/desktop"
-      - title: "Business Intelligence Platform : Tableau"
+      - title: "Download Business Intelligence Platform : Tableau"
         url: "https://www.tableau.com/products/desktop-free/download"
         
   - week: 6
