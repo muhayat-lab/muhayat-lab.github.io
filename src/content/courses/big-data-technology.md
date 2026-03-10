@@ -6,9 +6,9 @@ sessions:
   - week: 1
     title: "Konsep & Karakteristik Big Data - 5V"
     files:
-      - name: "RPS Teknologi Big Data"
+      - name: "Download RPS Teknologi Big Data"
         url: "https://drive.google.com/uc?export=download&id=1k6A8DSZ2UUY-j72ADcTUZRWA2VmxAycP"
-      - name: "Overview Mata Kuliah Teknologi Big Data"
+      - name: "Download Overview Mata Kuliah Teknologi Big Data"
         url: "https://drive.google.com/uc?export=download&id=1JT0nFWWVDoo7mvu01BZpLQZRsawFHUNS"
        
   - week: 2
@@ -22,7 +22,7 @@ sessions:
   - week: 4
     title: "NoSQL Database - MongoDB, Cassandra"
     files:
-      - name: "Modul Praktikum 1 Setup Environment - PySpark, MongoDB Atlas & Git Workflow"
+      - name: "Download Modul Praktikum 1 Setup Environment - PySpark, MongoDB Atlas & Git Workflow"
         url: "https://drive.google.com/uc?export=download&id=111Ha9bdD7soDE4hr4E3Fgqk4w7tTQrXD"
 
 
@@ -31,11 +31,11 @@ sessions:
     files:
       - name: "Materi Kuliah #5"
         url: "https://drive.google.com/uc?export=download&id="
-      - name: "Modul Praktikum 2 Batch Data Ingestion & Processing with Spark"
+      - name: "Download Modul Praktikum 2 Batch Data Ingestion & Processing with Spark"
         url: "https://drive.google.com/uc?export=download&id=1hFNBVIthMlDXrD_C3HVH9hQ3OoPgLfN6"
-      - name: "Dataset Praktikum 2 : ecommerce_raw.csv"
+      - name: "Download Dataset Praktikum 2 : ecommerce_raw.csv"
         url: "https://drive.google.com/uc?export=download&id=1jHFO-fk3YGI0VmYQMOjPJkUbA-GSOz7Q"
-      - name: "Modul Praktikum 3 Batch Data Analytics + Visualization Layer"
+      - name: "Download Modul Praktikum 3 Batch Data Analytics + Visualization Layer"
         url: "https://drive.google.com/uc?export=download&id=1vr_bs-UC13HwKgdEKZFmynleysd7ddi3"
     reading:
       - title: "Download Business Intelligence Platform : Power BI Desktop"
