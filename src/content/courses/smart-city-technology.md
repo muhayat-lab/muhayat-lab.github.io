@@ -23,7 +23,9 @@ sessions:
 
   - week: 3
     title: "Smart Mobility dan Intelligent Transportation System"
-
+    files:
+      - name: "Materi Kuliah #3 Smart Mobility dan Intelligent Transportation System"
+        url: "https://drive.google.com/uc?export=download&id=1OvgPHCFdJUvl1l73_3y7-ISK35Eraxsu"
 
   - week: 4
     title: "Smart Environment dan Sustainability Technology"
