@@ -6,7 +6,7 @@ sessions:
   - week: 1
     title: "Konsep dan Framework Smart City"
     files:
-      - name: "Materi Kuliah #1 Konsep dan Framework Smart City"
+      - name: "Download Materi Kuliah #1 Konsep dan Framework Smart City"
         url: "https://drive.google.com/uc?export=download&id=1oVBVufciNRze1gnhLrEshYquVmfD5kcG"
     reading:
       - title: "Referensi Utama dan Pendukung"
@@ -15,7 +15,7 @@ sessions:
   - week: 2
     title: "Smart Governance dan E-Government"
     files:
-      - name: "Materi Kuliah #2 Smart Governance dan E-Government"
+      - name: "Download Materi Kuliah #2 Smart Governance dan E-Government"
         url: "https://drive.google.com/uc?export=download&id=1kBrYLl8PtaNfaxMYkj99kF40eohyv8_J"
     reading:
       - title: "Referensi Utama dan Pendukung"
@@ -24,7 +24,7 @@ sessions:
   - week: 3
     title: "Smart Mobility dan Intelligent Transportation System"
     files:
-      - name: "Materi Kuliah #3 Smart Mobility dan Intelligent Transportation System"
+      - name: "Download Materi Kuliah #3 Smart Mobility dan Intelligent Transportation System"
         url: "https://drive.google.com/uc?export=download&id=1OvgPHCFdJUvl1l73_3y7-ISK35Eraxsu"
 
   - week: 4
