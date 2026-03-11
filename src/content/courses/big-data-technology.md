@@ -44,8 +44,8 @@ sessions:
         url: "https://www.tableau.com/products/desktop-free/download"
         
   - week: 6
-    title: "Stream Processing - Spark Structured Streaming + Streamlit"
-      - name: "Download Modul Praktikum 3 Batch Data Analytics + Visualization Layer"
+    title: "Stream Processing - Spark Structured Streaming - Streamlit"
+      - name: "Download Modul Praktikum 4 Streaming Processing - Real-Time Dashboard "
         url: "https://drive.google.com/uc?export=download&id=1B5BSIM1Jqj32D5upc3BrY9jxhBBb43QQ"
 
   - week: 7
