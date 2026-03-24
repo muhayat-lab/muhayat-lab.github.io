@@ -29,8 +29,10 @@ sessions:
 
   - week: 4
     title: "Smart Environment dan Sustainability Technology"
-
-
+    files:
+      - name: "Download Materi Kuliah #4 Smart Environment dan Sustainability Technology"
+        url: "https://drive.google.com/uc?export=download&id=1__vLBvPa0zujcYi8Q0MziVTCNyGpsR46"
+        
   - week: 5
     title: "Smart Economy dan Digital Economy"
 
