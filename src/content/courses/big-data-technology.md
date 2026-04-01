@@ -53,17 +53,18 @@ sessions:
   - week: 7
     title: "Big Data Analytics dan Use Case"
     files:
-      - name: "Download Modul Praktikum 7 Big Data Analytics dan Use Case"
+      - name: "Download Modul Praktikum 5 Big Data Analytics dan Use Case"
         url: "https://drive.google.com/uc?export=download&id=1SU_TR-i1HyXkHFXTDCLoZK2Q1_wSHoM4"
 
   - week: 8
     title: "Ujian Tengah Semester - UTS"
 
-
   - week: 9
     title: "Visualisasi Data Skala Besar"
-
-        
+    files:
+      - name: "Download Modul Praktikum 6 Real-Time Analytics & Visualisasi Data Skala Besar"
+        url: "https://drive.google.com/uc?export=download&id=1itMBBxQzdk_xLhiaih3fgsSJlNn-ZWha"
+          
   - week: 10
     title: "Keamanan dan Privasi Big Data"
 
