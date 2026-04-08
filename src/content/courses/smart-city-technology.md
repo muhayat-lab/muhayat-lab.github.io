@@ -28,14 +28,16 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1OvgPHCFdJUvl1l73_3y7-ISK35Eraxsu"
 
   - week: 4
-    title: "Smart Environment dan Sustainability Technology"
+    title: "Smart Economy dan Digital Economy"
     files:
-      - name: "Download Materi Kuliah #4 Smart Environment dan Sustainability Technology"
+      - name: "Download Materi Kuliah #5 Smart Environment dan Sustainability Technology"
         url: "https://drive.google.com/uc?export=download&id=1__vLBvPa0zujcYi8Q0MziVTCNyGpsR46"
         
   - week: 5
     title: "Smart Economy dan Digital Economy"
-
+    files:
+      - name: "Download Materi Kuliah #5 Smart Economy dan Digital Economy"
+        url: "https://drive.google.com/uc?export=download&id=1jJljBiIpXzWdRQNdav-X0F2XrUZ2s9w6"
         
   - week: 6
     title: "Smart Living dan Layanan Publik Digital"
