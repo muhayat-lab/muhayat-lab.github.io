@@ -64,6 +64,10 @@ sessions:
     files:
       - name: "Download Modul Praktikum 6 Real-Time Analytics & Visualisasi Data Skala Besar"
         url: "https://drive.google.com/uc?export=download&id=1itMBBxQzdk_xLhiaih3fgsSJlNn-ZWha"
+      - name: "Download Modul Praktikum 7 Machine Learning untuk Prediksi Traffic - Smart City AI"
+        url: "https://drive.google.com/uc?export=download&id=1THzEUlmDaZfRZS4uNIZQLQX4EFAq5X5Z"
+      - name: "Download Dataset Praktikum 7 traffic_smartcity_v1.csv"
+        url: "https://drive.google.com/uc?export=download&id=1lwtVQ82zWM2851sGDp9KbuBq-ZZKyqAS"
           
   - week: 10
     title: "Keamanan dan Privasi Big Data"
