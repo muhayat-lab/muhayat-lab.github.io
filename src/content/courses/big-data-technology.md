@@ -68,11 +68,13 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1THzEUlmDaZfRZS4uNIZQLQX4EFAq5X5Z"
       - name: "Download Dataset Praktikum 7 traffic_smartcity_v1.csv"
         url: "https://drive.google.com/uc?export=download&id=1lwtVQ82zWM2851sGDp9KbuBq-ZZKyqAS"
-          
+ 
   - week: 10
-    title: "Keamanan dan Privasi Big Data"
-
-
+    title: "Keamanan dan Privasi Big Data - Studi Kasus: Real-Time Fraud Detection Bank"
+    files:
+      - name: "Download Modul Praktikum 8 Keamanan dan Privasi Big Data"
+        url: "https://drive.google.com/uc?export=download&id=1v2-te68uzj-oaxmGYBbfCc_vwfji-4Av"
+          
   - week: 11
     title: "Etika dan Tata Kelola Data"
 
