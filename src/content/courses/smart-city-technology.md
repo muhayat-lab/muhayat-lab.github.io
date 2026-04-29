@@ -38,11 +38,14 @@ sessions:
     files:
       - name: "Download Materi Kuliah #5 Smart Economy dan Digital Economy"
         url: "https://drive.google.com/uc?export=download&id=1jJljBiIpXzWdRQNdav-X0F2XrUZ2s9w6"
-        
+
   - week: 6
     title: "Smart Living dan Layanan Publik Digital"
-
-
+    files:
+      - name: "Download Materi Kuliah #6 Smart Living dan Layanan Publik Digital"
+        url: "https://drive.google.com/uc?export=download&id=1rYlr-p-vVB9uGPzr4vkADHXtqpDQBtCo"
+        
+  
   - week: 7
     title: "Smart People dan Literasi Digital"
 
