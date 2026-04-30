@@ -77,6 +77,8 @@ sessions:
           
   - week: 11
     title: "Etika dan Tata Kelola Data"
+      - name: "Download Modul Praktikum 9 Rancang Bangun Sistem Monitoring dan Prediksi Kepadatan Kendaraan Berbasis Big Data Framework"
+        url: "https://drive.google.com/uc?export=download&id=1M0yAYTOTJTQGKL7fiQ2P10sdU0ZZk3VK"
 
         
   - week: 12
