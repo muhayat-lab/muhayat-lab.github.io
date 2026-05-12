@@ -45,9 +45,13 @@ sessions:
       - name: "Download Materi Kuliah #6 Smart Living dan Layanan Publik Digital"
         url: "https://drive.google.com/uc?export=download&id=1rYlr-p-vVB9uGPzr4vkADHXtqpDQBtCo"
         
-  
   - week: 7
     title: "Smart People dan Literasi Digital"
+    files:
+      - name: "Download Materi Kuliah #7 Smart People dan Literasi Digital"
+        url: "https://drive.google.com/uc?export=download&id=1ugOA4ikXuf0IkbCIVOUTUyl0SpSsTNY_"
+  
+  
 
 
   - week: 8
