@@ -8,6 +8,8 @@ sessions:
     files:
       - name: "RPS WSE"
         url: "https://drive.google.com/uc?export=download&id=1ZfsfPL9J1AhYyTj-74ZlSH7chNcphjND"
+      - name: "Kontrak Perkuliahan WSE"
+        url: "https://drive.google.com/uc?export=download&id=1wq7kfefdCKqlsRhZHiyHRbh2UX5JUXDW"        
       - name: "Materi Kuliah 01 The Fundamental of Web Service Engineering"
         url: "https://drive.google.com/uc?export=download&id=1qIXzR1nOzM_YURwBCpMM8hqTkYetiP3A"
       - name: "Modul Praktikum 01 Menjalankan Web Service Lokal dan Mengamati Request serta Response"
