@@ -14,7 +14,7 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1qIXzR1nOzM_YURwBCpMM8hqTkYetiP3A"
       - name: "Modul Praktikum 01 Menjalankan Web Service Lokal dan Mengamati Request serta Response"
         url: "https://drive.google.com/uc?export=download&id=1sEiYdQA6RhYkQmALFVOGOO5UW_mAtnHX"
-      - name: "Kode awal dan format laporan: Paket Proyek_Praktikum_01_WSE.zip "
+      - name: "Kode awal dan format laporan: Paket Proyek_Praktikum_01_WSE.zip"
         url: "https://drive.google.com/uc?export=download&id=1zsNiNRgruyvnC2axcgv6reESFMhZhIhK"
     reading:
       - title: "Node.js Download dan pemilihan versi LTS"
@@ -31,12 +31,12 @@ sessions:
   - week: 2
     title: "Componen of Web Service"
     files:
-      - name: "Download Buku Ajar #2 Componen of Web Service"
-        url: "https://drive.google.com/uc?export=download&id=1bKeY8vDrI4XfmhWsd5TiXDt06kVOKT-x"
-      - name: "Download Modul Praktikum #2 Parsing data XML & JSON"
-        url: "https://drive.google.com/uc?export=download&id=1SubDVR82zMXZmXYEU74ChrNP2ZS3NuPl"
-      - name: "Download Contoh Laporan Praktikum #2"
-        url: "https://drive.google.com/uc?export=download&id=1rO8dFQN6p90dhMrdgXSfV0UecrpsYH3a"
+      - name: "Materi Kuliah 02 Componen of Web Service"
+        url: "https://drive.google.com/uc?export=download&id=1lZ0u784quZrMRgHKYt0k6RnKoY3aHNGA"
+      - name: "Modul Praktikum 02 Pertukaran Data JSON dan XML melalui HTTP"
+        url: "https://drive.google.com/uc?export=download&id=1KCwB0ndKjUgmp3Mo9TnnU1b254lRm4CK"
+      - name: "Kode awal dan format laporan: Paket Proyek_Praktikum_02_WSE.zip"
+        url: "https://drive.google.com/uc?export=download&id=1zOvcnn3UbJvPI8hFQoUZocf0s5Gmr6fU"
 
   - week: 3
     title: "Web Service Architecture"
