@@ -4,27 +4,33 @@ code: "TI23042"
 description: "Mata kuliah ini membahas konsep, desain, implementasi, dan pengujian aplikasi mobile berbasis Android. Mahasiswa dibekali kemampuan teknis membangun aplikasi native menggunakan Java/Kotlin, memanfaatkan sensor, layanan API eksternal, serta menerapkan arsitektur modern seperti MVVM dan Jetpack Compose. Pendekatan pembelajaran menggunakan Outcome-Based Education (OBE) dengan penekanan pada praktik, studi kasus, dan proyek akhir."
 sessions:
   - week: 1
-    title: "Konsep Dasar Mobile Programming dan Ekosistem Android / iOS"
+    title: "Konsep Dasar Pemrograman Mobile dan Karakteristik Perangkat Mobile"
     files:
-      - name: "Download RPS MP 20251"
-        url: "https://drive.google.com/uc?export=download&id=18gX3xKJcG-T16aXH7N0wiKiQ_Fi-UBZo"    
-      - name: "Download Materi Kuliah #1"
-        url: "https://drive.google.com/uc?export=download&id=16SWLzf_IAC9x1iauLtXwau8VlOgd6Toh"
-      - name: "Download Modul Praktikum #1"
-        url: "https://drive.google.com/uc?export=download&id=1Kum8pyks52GnqBVaFLXr4SUR800tDMxn"        
+      - name: "RPS PEMROGRAMAN MOBILE"
+        url: "https://drive.google.com/uc?export=download&id=19b24-PkVhem3lduX2NoDiCuLxQfgVdhK"    
+      - name: "Kontrak Perkuliahan PM"
+        url: "https://drive.google.com/uc?export=download&id=1TjeK4xdzc9SW5JeCcUeU9g1qpUKb8Hkj"
+      - name: "Kuliah-01-PM-Konsep dasar pemrograman mobile dan karakteristik perangkat mobile"
+        url: "https://drive.google.com/uc?export=download&id=1SGS9AGf_6qI_hrQpsdU8c8HrQrRy0j-s"
+      - name: "Modul-Praktikum-01-PM-Mengenal Android dan Membangun Aplikasi Profil WargaHub"
+        url: "https://drive.google.com/uc?export=download&id=1X7F3OOLCZidOCJSmklawotACHvTMhZu3"
+      - name: "Slide-Praktikum-01-PM-Mengenal Android dan Membangun Aplikasi Profil WargaHub"
+        url: "https://drive.google.com/uc?export=download&id=1t_tDFj0Xja4ND2YvwI67moZSYgEu4qQz"         
     reading:
-      - title: "Link Download Android Studio Narhwal 3 2025"
+      - title: "Link Download Android Studio Rabbit 1 | 2026.2.1"
         url: "https://developer.android.com/studio?hl=id"
       - title: "Link Official Website Kotlin"
         url: "https://kotlinlang.org"        
 
   - week: 2
-    title: "Mendesain Antarmuka Aplikasi Android - Layout, Views, ConstraintLayout"
+    title: "Platform Mobile Utama Android, iOS serta Perbedaan dalam Pengembangan Aplikasi"
     files:
-      - name: "Download Buku Ajar #2 Mendesain Antarmuka Aplikasi Android"
-        url: "https://drive.google.com/uc?export=download&id=1PrxYJBByLN_clWG5FQv8_Q9H5cy1u-qE"
-      - name: "Download Modul Praktikum #2 Layout, Views, ConstraintLayout"
-        url: "https://drive.google.com/uc?export=download&id=1uMBRcbryOMScBV5dUPKQnY5JjElf74XN"        
+      - name: "Kuliah-02-PM-Platform Android dan iOS serta Perbedaan Pengembangan Aplikasi"
+        url: "https://drive.google.com/uc?export=download&id=1cjIwB3qwL-d8xJQze6-GdnkPUhSqOQBd"
+      - name: "Modul-Praktikum-02-PM-Activity, lifecycle, state, dan Intent"
+        url: "https://drive.google.com/uc?export=download&id=1Pp1yremfTwnhesB1OCXJ3Sm2C_BbHQW1"
+      - name: "Slide-MP-P02-Activity, lifecycle, state, dan Intent"
+        url: "https://drive.google.com/uc?export=download&id=1xCvAszpbgNu7ksF_BqAl8oL6ZxkOY_Z-"      
 
   - week: 3
     title: "Menghubungkan UI dengan Logic Pemrograman"
