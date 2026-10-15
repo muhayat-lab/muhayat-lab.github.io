@@ -41,20 +41,13 @@ sessions:
   - week: 3
     title: "Web Service Architecture"
     files:
-      - name: "Download Buku Ajar #3 Web Service Architecture"
-        url: "https://drive.google.com/uc?export=download&id=16NGGs0pPasbKxKTLOajbDGUSIZR2AKn2"
-      - name: "Download Modul Praktikum #3 Web Service Architecture"
-        url: "https://drive.google.com/uc?export=download&id=1a47FL79BBotk3S-YGJKoz8zbXKp-O8iY"
-      - name: "Download Contoh Laporan Praktikum #3"
-        url: "https://drive.google.com/uc?export=download&id=1TonNGgyVeSiar_haFIgNNZ0l-6Y2fqKR"
-    reading:
-      - title: "Link Download Tool Praktikum #3 - Node.js"
-        url: "https://nodejs.org/en/download"
-      - title: "Link Download IDE Tool Praktikum #3 - Visual Studio Code"
-        url: "https://code.visualstudio.com/download"
-      - title: "Link Diagram Tool Online Praktikum #3 - Miro Diagram"
-        url: "https://miro.com/"
-
+      - name: "Materi Kuliah 03 Web Service Architecture"
+        url: "https://drive.google.com/uc?export=download&id=1Nmunpd5B-k1me3ydybqepxTF5-dfcaVS"
+      - name: "Modul Praktikum 03 Merancang Layanan dengan Pendekatan SOA"
+        url: "https://drive.google.com/uc?export=download&id=1dgj_eeYfxcbKpEkxUbPXwPZHiy3jmrnH"
+      - name: "Slide Kuliah 03 - Arsitektur SOA dan Prinsip Loose Coupling"
+        url: "https://drive.google.com/uc?export=download&id=1wTllKIbex66vRkf8vDN1uVcsJXUZp3XP"
+    
   - week: 4
     title: "Web Service Developmeent Methodologies"
     files:
