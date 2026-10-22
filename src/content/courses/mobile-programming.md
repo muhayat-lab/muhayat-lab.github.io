@@ -33,20 +33,20 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1xCvAszpbgNu7ksF_BqAl8oL6ZxkOY_Z-"      
 
   - week: 3
-    title: "Menghubungkan UI dengan Logic Pemrograman"
+    title: "Arsitektur Aplikasi Mobile dan Siklus Hidup Sistem"
     files:
-      - name: "Download Buku Ajar #3 Menghubungkan UI dengan Logic Pemrograman"
-        url: "https://drive.google.com/uc?export=download&id=1GpflSMfE45c3MhK_qv_cpzfPiKCkrjQz"
-      - name: "Download Modul Praktikum #3 UI to Logic"
-        url: "https://drive.google.com/uc?export=download&id=1CIynYmNCG6er_vm2wd_AxPoSH3cllZcO"
+      - name: "Materi Kuliah 03 Arsitektur Aplikasi Mobile dan Siklus Hidup Sistem"
+        url: "https://drive.google.com/uc?export=download&id=15hAi3MpNsLSwR-ele9Dz3R7UZfrmyY8l"
 
   - week: 4
-    title: "Menggunakan Navigasi Aplikasi"
+    title: "Perancangan dan Implementasi UI Responsif"
     files:
-      - name: "Download Buku Ajar #4 Menggunakan Navigasi Aplikasi"
-        url: "https://drive.google.com/uc?export=download&id=1RLqb5dV0YubU1U29UbUyjAeSqL6pBqyi"
-      - name: "Download Modul Praktikum #4 Navigation; Explicit Intent, Implicit Intent, Fragment"
-        url: "https://drive.google.com/uc?export=download&id=1Kxxjs4C6CvZXdVnaFGl9JRXS5s_Vyz7g"
+      - name: "Materi Kuliah 04 Perancangan dan Implementasi UI Responsif"
+        url: "https://drive.google.com/uc?export=download&id=1G7ZV5R_wpMMzdcrjyt11wTCf5qYI9uos"
+      - name: "Modul Praktikum 03 UI Responsif & Form Report"
+        url: "https://drive.google.com/uc?export=download&id=17RLeSrd-fO6Jr3Pg7mTwvhcucp4NzEjd"
+      - name: "Slide-MP-03-UI-Responsif-Form-Report"
+        url: "https://drive.google.com/uc?export=download&id=1TVK6gogio4cqTYQ7r89O_d_vXfPl5H2q"
 
   - week: 5
     title: "Menyimpan Data Sederhana"
