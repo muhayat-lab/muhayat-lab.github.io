@@ -49,12 +49,14 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1wTllKIbex66vRkf8vDN1uVcsJXUZp3XP"
     
   - week: 4
-    title: "Web Service Developmeent Methodologies"
+    title: "SOAP and REST"
     files:
-      - name: "Download Buku Ajar #4 Web Service Development Methodologies"
-        url: "https://drive.google.com/uc?export=download&id=1zmPKBbtYW_VntZiSE5r-DyLHbj_N3iIW"
-      - name: "Download Modul Praktikum #4 Web Service Developmeent Methodologies - AGILE"
-        url: "https://drive.google.com/uc?export=download&id=1wjg3pYfyBfqwo_tX7HQXVq7n8Zxm1SP4"
+      - name: "Materi Kuiah 04 Soap and Rest"
+        url: "https://drive.google.com/uc?export=download&id=1MFhNGuIQHZwDe7WmKLl1f8TmdSBhy33z"
+      - name: "Modul Praktikum 04 Membandingkan SOAP dan REST"
+        url: "https://drive.google.com/uc?export=download&id=18ggg2RbwKcd2manPfViC69w2vSeOQh78"
+      - name: "Slide Kuliah 04 SOAP dan REST"
+        url: "https://drive.google.com/uc?export=download&id=1v7mV52clF16L1JMzCHaXBbaysFWbaLXp"
 
   - week: 5
     title: "API Design Principles"
