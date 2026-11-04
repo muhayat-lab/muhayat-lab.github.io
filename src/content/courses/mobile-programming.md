@@ -49,12 +49,12 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1TVK6gogio4cqTYQ7r89O_d_vXfPl5H2q"
 
   - week: 5
-    title: "Menyimpan Data Sederhana"
+    title: "Interaksi pengguna (UX) dan standar usability dalam aplikasi mobile"
     files:
-      - name: "Download Buku Ajar #5 Menyimpan Data Sederhana / SharedPreferences & File Handling"
-        url: "https://drive.google.com/uc?export=download&id=1lI5nV70dt-y6YEQY3QQFwPD3amiXo3o9"
-      - name: "Download Modul Praktikum #5 SharedPreferences & File Handling"
-        url: "https://drive.google.com/uc?export=download&id=14FsFWvLJUTvA_h9ohHmOudwVgVbMflYy"
+      - name: Materi Kuliah 05 Interaksi pengguna (UX) dan standar usability dalam aplikasi mobile"
+        url: "https://drive.google.com/uc?export=download&id=1oew8ov7I4ZFPP8p5QQcgWQ4yjiwvQHUi"
+      - name: "Modul Praktikum 04 UX, RecyclerView, Fragment, dan navigasi"
+        url: "https://drive.google.com/uc?export=download&id=1p93IuvqclTMmA9cnc4ROfQ6Oo7_XcU5p"
 
   - week: 6
     title: "Menggunakan Database Lokal"
