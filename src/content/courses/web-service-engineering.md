@@ -59,14 +59,12 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1v7mV52clF16L1JMzCHaXBbaysFWbaLXp"
 
   - week: 5
-    title: "API Design Principles"
+    title: "Merancang dan Mengimplementasikan Web Service menggunakan Framework"
     files:
-      - name: "Download Buku Ajar #5 API Design Principles"
-        url: "https://drive.google.com/uc?export=download&id=1V2v4jJFWjUY9Rj-Cx52_lHr1C8Bj1V0a"
-      - name: "Download Modul Praktikum #5 Membangun RESTful CRUD API dengan Express"
-        url: "https://drive.google.com/uc?export=download&id=1wbKGO4W2ND6znMcwUINFWq_XoY3Ts0bT"
-      - name: "Contoh Laporan Praktikum #5"
-        url: "https://drive.google.com/uc?export=download&id=1YK0tJF2QENt6t_TYNCS7jFIKAKW2_aG-"
+      - name: "Materi Kuiah 05 Merancang dan Mengimplementasikan Web Service menggunakan Framework"
+        url: "https://drive.google.com/uc?export=download&id=1ySvivS6TAD89i0PrS7Np9u3e8GsTLn9H"
+      - name: "Modul Praktikum 05 Desain Endpoint dan Implementasi Web Service dengan Framework"
+        url: "https://drive.google.com/uc?export=download&id=1NiJ8YjDs66sj0lfKkC6r3xvVAYJUHr3z"
         
   - week: 6
     title: "RESTful API Best Practices with 7 Principles - Express"
