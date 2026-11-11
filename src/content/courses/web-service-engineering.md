@@ -67,10 +67,12 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1NiJ8YjDs66sj0lfKkC6r3xvVAYJUHr3z"
         
   - week: 6
-    title: "RESTful API Best Practices with 7 Principles - Express"
+    title: "Menerapkan Prinsip Keamanan Dasar pada Web Service"
     files:
-      - name: "Download Modul Praktikum #6 RESTful API Best Practices with 7 Principles"
-        url: "https://drive.google.com/uc?export=download&id=12Fux4X6SCcKVKRPlpuAthL4iWvEmL73e"
+      - name: "Materi Kuiah 06 Menerapkan Prinsip Keamanan Dasar pada Web Service"
+        url: "https://drive.google.com/uc?export=download&id=1ix5yg9NWJlyjt5mVZqeAB15HDESEBwmE"
+      - name: "Modul Praktikum 06 Autentikasi, Otorisasi, API key/token, Enkripsi, TLS, Ancaman API"
+        url: "https://drive.google.com/uc?export=download&id=123zNXLaJR9Q7OEC2OWyPhxBbdMI_rPEK"
 
   - week: 7
     title: "Meningkatkan Keamanan, Logging, dan Monitoring pada RESTful API - Express"
