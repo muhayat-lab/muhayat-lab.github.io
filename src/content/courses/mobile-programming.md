@@ -57,10 +57,12 @@ sessions:
         url: "https://drive.google.com/uc?export=download&id=1p93IuvqclTMmA9cnc4ROfQ6Oo7_XcU5p"
 
   - week: 6
-    title: "Menggunakan Database Lokal"
+    title: "Implementasi Pengelolaan Data Lokal pada Perangkat Mobile"
     files:
-      - name: "Download Modul Praktikum #6 SQLite - Room ORM"
-        url: "https://drive.google.com/uc?export=download&id=1TSeXiicqwabk3a1qqkE56BDXOqD_EcrE"
+      - name: "Materi Kuliah 06 Implementasi Pengelolaan Data Lokal pada Perangkat Mobile"
+        url: "https://drive.google.com/uc?export=download&id=1jkqj434BtUW9G7uzsDA3B3XZ9oWUZB2P"
+      - name: "Modul Praktikum 05 SharedPreferences; pengantar SQLite; Entity, DAO, Room; Repository/ViewModel"
+        url: "https://drive.google.com/uc?export=download&id=1nHXe5AFfSzXx7U-XNgqO4kTEUi4Y-ywv"
         
   - week: 7
     title: "Menerapkan Desain UI Modern"
